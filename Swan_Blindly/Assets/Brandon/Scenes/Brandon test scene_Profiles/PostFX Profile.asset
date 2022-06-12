@@ -1323,22 +1323,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a79b01ea5641d4aa6daa2e23605641, type: 3}
   m_Name: Bloom
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
   intensity:
     overrideState: 1
-    value: 46.9
+    value: 31.93
   threshold:
     overrideState: 1
-    value: 14.8
+    value: 5
   softKnee:
     overrideState: 0
     value: 0.5
   clamp:
     overrideState: 1
-    value: 64954
+    value: 64952.4
   diffusion:
     overrideState: 1
     value: 9
@@ -1446,19 +1446,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3f6f3f7c722b4544b97e3c75840aa33, type: 3}
   m_Name: AutoExposure
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
   filtering:
     overrideState: 1
-    value: {x: 26.280502, y: 70.15355}
+    value: {x: 26.905375, y: 81.77383}
   minLuminance:
     overrideState: 1
-    value: -4.38
+    value: -4.09
   maxLuminance:
     overrideState: 1
-    value: -2.9
+    value: -1.7
   keyValue:
     overrideState: 1
     value: 0.1
