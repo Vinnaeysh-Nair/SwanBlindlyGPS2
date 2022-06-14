@@ -204,7 +204,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2566122746021567062}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb82ca3f7a4837148bcd6d86f87c11a2, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d06d05b4b16ec946ac1a7d40aec8585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bombDamage: 10
