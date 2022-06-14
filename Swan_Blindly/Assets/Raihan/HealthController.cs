@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HealthController : MonoBehaviour
 {
@@ -84,6 +85,11 @@ public class HealthController : MonoBehaviour
                 healCooldown = maxHealCooldown;
                 canRegen = false;
             }
+        }
+
+        if (currentPlayerHealth == 0)
+        {
+            SceneManager.LoadScene("LoseScreen");
         }
     }
 }
