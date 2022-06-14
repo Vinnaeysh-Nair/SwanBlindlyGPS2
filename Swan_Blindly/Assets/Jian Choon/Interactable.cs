@@ -6,8 +6,6 @@ public class Interactable : MonoBehaviour
 {
     [SerializeField] private float radius = 3f;
     [SerializeField] private Transform player;
-    [SerializeField] private KeyCode interactionButton;
-    private bool canInteract = false;
 
     public virtual void pickUpItem()
     {
@@ -18,17 +16,6 @@ public class Interactable : MonoBehaviour
     {
         float distance = Vector3.Distance(player.position, transform.position);
         if(distance <= radius)
-        {
-            if (!canInteract)
-                canInteract = true;
-        }
-        else  
-        {
-            if (canInteract)
-                canInteract = false;
-        }
-        
-        if (Input.GetKeyDown(interactionButton)&&canInteract)
         {
             pickUpItem();
         }

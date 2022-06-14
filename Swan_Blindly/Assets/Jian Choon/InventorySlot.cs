@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class InventorySlot : MonoBehaviour
 {
     [SerializeField] private Image icon;
-    
+
     Item tempItem;
 
     public void AddItem(Item newItem)
@@ -23,5 +23,11 @@ public class InventorySlot : MonoBehaviour
 
         icon.sprite = null;
         icon.enabled = false;
+    }
+
+    public void useItem()
+    {
+        tempItem.use();
+        Inventory.instance.removeItem(tempItem);
     }
 }

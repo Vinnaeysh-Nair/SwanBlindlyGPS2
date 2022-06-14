@@ -5,8 +5,12 @@ using UnityEngine;
 public class InventoryUI : MonoBehaviour
 {
     [SerializeField] private Transform InventoryParents;
+    //[SerializeField] private Transform player;
+
     Inventory tempInventory;
     InventorySlot[] slots;
+
+    private int itemCount = 0;
 
     void Start()
     {
@@ -25,6 +29,7 @@ public class InventoryUI : MonoBehaviour
             if (i < tempInventory.items.Count)
             {
                 slots[i].AddItem(tempInventory.items[i]);
+                itemCount++;
             }
             else
             {
@@ -32,4 +37,17 @@ public class InventoryUI : MonoBehaviour
             }
         }
     }
+
+    /*public void dropItem()
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (i == (itemCount-1))
+            {
+                Vector3 itemDropLocation = new Vector3(player.position.x, player.position.y, player.position.z + 1f);
+                Instantiate(slots[i], itemDropLocation, Quaternion.identity);
+                //ScriptableObject.CreateInstance<Item>();
+            }
+        }
+    }*/
 }
