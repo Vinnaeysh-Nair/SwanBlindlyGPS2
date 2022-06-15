@@ -11,7 +11,7 @@ public class NPCCatBehaviour : MonoBehaviour
     void Start()
     {
         collider = GetComponent<Collider>();
-        hasItem = GameObject.FindWithTag("Item");
+        //hasItem = GetComponent<Inventory>().items;
         Dialogue.SetActive(false);
     }
 
@@ -25,7 +25,7 @@ public class NPCCatBehaviour : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             Dialogue.SetActive(true);
-
+            
             if(hasItem = true)
             {
                 Debug.Log("Yes");
