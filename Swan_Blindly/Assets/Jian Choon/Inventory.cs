@@ -18,6 +18,9 @@ public class Inventory : MonoBehaviour
     }
     #endregion
 
+    public delegate void OnItemChanged();
+    public OnItemChanged onItemChangedCallback;
+
     [SerializeField] private int inventorySpaceLimit = 5;
 
     public List<Item> items = new List<Item>();
@@ -30,11 +33,22 @@ public class Inventory : MonoBehaviour
             return false;
         }
         items.Add(itemTemp);
+
+        invokeItemChanged();
+
         return true;
     }
 
     public void removeItem(Item itemTemp)
     {
         items.Remove(itemTemp);
+
+        invokeItemChanged();
+    }
+
+    void invokeItemChanged()
+    {
+        if (onItemChangedCallback != null)
+            onItemChangedCallback.Invoke();
     }
 }
