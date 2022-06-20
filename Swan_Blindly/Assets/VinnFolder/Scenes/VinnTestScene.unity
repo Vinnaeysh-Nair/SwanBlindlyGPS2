@@ -231,6 +231,7 @@ GameObject:
   - component: {fileID: 463121654}
   - component: {fileID: 463121656}
   - component: {fileID: 463121655}
+  - component: {fileID: 463121657}
   m_Layer: 5
   m_Name: FixedTouchField
   m_TagString: Untagged
@@ -296,6 +297,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 463121653}
   m_CullTransparentMesh: 1
+--- !u!114 &463121657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463121653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a78bc3a27120e045a9a687128dc2a3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TouchDist: {x: 0, y: 0}
+  PointerOld: {x: 0, y: 0}
+  Pressed: 0
 --- !u!1 &715146746
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,6 +733,7 @@ GameObject:
   - component: {fileID: 1464413944}
   - component: {fileID: 1464413945}
   - component: {fileID: 1464413946}
+  - component: {fileID: 1464413947}
   m_Layer: 0
   m_Name: PlayerBody
   m_TagString: Untagged
@@ -847,6 +864,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.4834431, y: 0.14793563, z: 1}
   m_Center: {x: -0.0016992539, y: -0.975309, z: 0}
+--- !u!114 &1464413947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464413939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e5f44651dcf7e4bbb859118756c53d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  touchField: {fileID: 463121657}
+  Cam: {fileID: 1632687970}
+  CamAngle: 0
+  CamSpeed: 0.5
+  CamOffset: {x: 0, y: 2, z: -10}
 --- !u!1 &1632687968
 GameObject:
   m_ObjectHideFlags: 0
