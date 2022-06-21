@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -318,7 +318,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 3
   player: {fileID: 112639811}
-  interactionButton: 101
   item: {fileID: 11400000, guid: 8fb7b0c0a8690b44fa9ecdfd78c9a8ba, type: 2}
 --- !u!65 &16943183
 BoxCollider:
@@ -483,6 +482,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5557156230292288233, guid: e945a7ab0c031de43bbbeb28cbd394ed, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e945a7ab0c031de43bbbeb28cbd394ed, type: 3}
 --- !u!4 &112639811 stripped
@@ -815,7 +818,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 3
   player: {fileID: 112639811}
-  interactionButton: 101
   item: {fileID: 11400000, guid: 547b9a92f64018740b241530e6200985, type: 2}
 --- !u!65 &289439731
 BoxCollider:
@@ -929,7 +931,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 3
   player: {fileID: 112639811}
-  interactionButton: 101
   item: {fileID: 11400000, guid: 49aa74c89b1040545b370b3b3bc2a119, type: 2}
 --- !u!65 &344020399
 BoxCollider:
@@ -1290,7 +1291,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 3
   player: {fileID: 112639811}
-  interactionButton: 101
   item: {fileID: 11400000, guid: 7cf8a85c1243c2a4fafb13ff43da893b, type: 2}
 --- !u!65 &398064746
 BoxCollider:
@@ -3148,7 +3148,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 3
   player: {fileID: 112639811}
-  interactionButton: 101
   item: {fileID: 11400000, guid: 85e592d0fb2ef2d4fa29761660de76c5, type: 2}
 --- !u!65 &1294708518
 BoxCollider:
@@ -3565,7 +3564,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 3
   player: {fileID: 112639811}
-  interactionButton: 101
   item: {fileID: 11400000, guid: d136d28647b7c7e47b994a4d9583f4bd, type: 2}
 --- !u!65 &1577782945
 BoxCollider:
@@ -3843,7 +3841,7 @@ Terrain:
   m_DrawTreesAndFoliage: 1
   m_StaticShadowCaster: 0
   m_ReflectionProbeUsage: 1
-  m_MaterialTemplate: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
+  m_MaterialTemplate: {fileID: 2100000, guid: 594ea882c5a793440b60ff72d896021e, type: 2}
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
