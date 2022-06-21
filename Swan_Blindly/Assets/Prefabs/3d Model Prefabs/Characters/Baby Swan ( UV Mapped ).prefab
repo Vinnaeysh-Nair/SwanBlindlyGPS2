@@ -93,7 +93,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4380978412318312970}
   - component: {fileID: 313583991340349031}
-  - component: {fileID: 313583991340349029}
   - component: {fileID: 313583991340349030}
   m_Layer: 0
   m_Name: Baby Swan ( UV Mapped )
@@ -109,9 +108,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4001320772954165424}
+<<<<<<< Updated upstream
   m_LocalRotation: {x: 0, y: -0.3244292, z: 0, w: 0.94591}
   m_LocalPosition: {x: 3.555141, y: 23.63, z: 29.04616}
   m_LocalScale: {x: 47.29514, y: 47.29514, z: 47.29514}
+=======
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+>>>>>>> Stashed changes
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4000746492469644164}
@@ -120,7 +125,7 @@ Transform:
   - {fileID: 1591042126710967891}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -37.862, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &313583991340349031
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -132,6 +137,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
+<<<<<<< Updated upstream
   m_Size: {x: 0.66, y: 0.64, z: 0.35277548}
   m_Center: {x: 0, y: 0.07, z: 0}
 --- !u!114 &313583991340349029
@@ -148,6 +154,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 10
   rotationSpeed: 100
+=======
+  m_Size: {x: 0.57156336, y: 0.62159985, z: 1}
+  m_Center: {x: -0.045345545, y: 0.074690886, z: 0}
+>>>>>>> Stashed changes
 --- !u!54 &313583991340349030
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -164,6 +174,51 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+<<<<<<< Updated upstream
+=======
+--- !u!23 &3370486824062527195
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4001320772954165424}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 127461bc8767c8448b5f5f777592e216, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+>>>>>>> Stashed changes
 --- !u!1 &4368035534000067957
 GameObject:
   m_ObjectHideFlags: 0
