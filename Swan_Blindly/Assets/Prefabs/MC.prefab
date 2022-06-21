@@ -28,14 +28,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3007633153131770413}
-  m_LocalRotation: {x: -0.028480964, y: 0.9876684, z: 0.14887862, w: -0.039182156}
-  m_LocalPosition: {x: 0.243, y: 0.374, z: -0.756}
+  m_LocalRotation: {x: 0.04531265, y: -0, z: -0, w: 0.99897283}
+  m_LocalPosition: {x: 0, y: 0.284, z: -0.97}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2101587680127137406}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -16.969, y: 185.151, z: -4.072}
+  m_LocalEulerAnglesHint: {x: 5.194, y: 0, z: 0}
 --- !u!20 &7662676870435815806
 Camera:
   m_ObjectHideFlags: 0
@@ -199,7 +199,7 @@ Transform:
   m_GameObject: {fileID: 7818870367700688293}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10.568069, y: 15.52, z: 80.27907}
-  m_LocalScale: {x: 1, y: 1, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1882602115632760011}
@@ -224,7 +224,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: -0.58, y: 0.03, z: 0}
+  m_Center: {x: 0, y: 0.03, z: 0}
 --- !u!1001 &2804621073529949889
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -232,6 +232,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2101587680127137406}
     m_Modifications:
+    - target: {fileID: 3370486824062527195, guid: 038153176df5b214997ed652c2efc285, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4001320772954165424, guid: 038153176df5b214997ed652c2efc285, type: 3}
       propertyPath: m_Name
       value: Baby Swan ( UV Mapped )
@@ -242,15 +246,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4380978412318312970, guid: 038153176df5b214997ed652c2efc285, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.295
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4380978412318312970, guid: 038153176df5b214997ed652c2efc285, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.327
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4380978412318312970, guid: 038153176df5b214997ed652c2efc285, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.657
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4380978412318312970, guid: 038153176df5b214997ed652c2efc285, type: 3}
       propertyPath: m_LocalRotation.w
@@ -280,7 +284,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8457430025191083536, guid: 038153176df5b214997ed652c2efc285, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8457430025191083536, guid: 038153176df5b214997ed652c2efc285, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.817
+      objectReference: {fileID: 0}
+    - target: {fileID: 8457430025191083536, guid: 038153176df5b214997ed652c2efc285, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8457430025191083536, guid: 038153176df5b214997ed652c2efc285, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8457430025191083536, guid: 038153176df5b214997ed652c2efc285, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8457430025191083536, guid: 038153176df5b214997ed652c2efc285, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 313583991340349029, guid: 038153176df5b214997ed652c2efc285, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 038153176df5b214997ed652c2efc285, type: 3}
 --- !u!4 &1882602115632760011 stripped
 Transform:
