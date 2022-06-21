@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5361728914076865923}
   - component: {fileID: 8193500238284296329}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: TakeDamagePH
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
