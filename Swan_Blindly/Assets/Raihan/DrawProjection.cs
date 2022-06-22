@@ -16,6 +16,7 @@ public class DrawProjection : MonoBehaviour
     //The physics layer that will cause the line to stop being drawn
     public LayerMask CollidableLayers;
 
+
     void Start()
     {
         throwingController = GetComponent<Throwing>();
@@ -24,6 +25,7 @@ public class DrawProjection : MonoBehaviour
 
     void Update()
     {
+
         lineRenderer.positionCount = numPoints;
         List<Vector3> points = new List<Vector3>();
         Vector3 startingPosition = throwingController.throwingPoint.position;
@@ -34,7 +36,7 @@ public class DrawProjection : MonoBehaviour
             newPoint.y = startingPosition.y + startingVelocity.y * t + Physics.gravity.y / 2f * t * t;
             points.Add(newPoint);
 
-            if(Physics.OverlapSphere(newPoint, 2, CollidableLayers).Length > 0)
+            if(Physics.OverlapSphere(newPoint, 0.2f, CollidableLayers).Length > 0)
             {
                 lineRenderer.positionCount = points.Count;
                 break;

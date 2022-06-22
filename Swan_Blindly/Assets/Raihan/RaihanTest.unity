@@ -295,6 +295,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5557156229302997256, guid: e945a7ab0c031de43bbbeb28cbd394ed, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5557156229302997259, guid: e945a7ab0c031de43bbbeb28cbd394ed, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -904,7 +908,7 @@ MonoBehaviour:
   timeBetweenPoints: 0.1
   CollidableLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 119
 --- !u!1 &1404408642
 GameObject:
   m_ObjectHideFlags: 0
