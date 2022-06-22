@@ -7,21 +7,24 @@ using UnityEngine.Rendering.Universal;
 public class PostProcessingManager : MonoBehaviour
 {
     public Volume volume;
+    Vignette vignette;
+    Bloom bloom;
+    ChromaticAberration chrome;
 
     // Start is called before the first frame update
     void Start()
     {
-        Bloom bloom;
 
-        if(volume.profile.TryGet<Bloom>(out bloom))
-        {
-            bloom.intensity.value = 100;
-        }
+        volume.profile.TryGet<Bloom>(out bloom);
+        volume.profile.TryGet<Vignette>(out vignette);
+        volume.profile.TryGet<ChromaticAberration>(out chrome);
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        bloom.intensity.value = Mathf.PingPong(Time.time * 2, 5);
+        vignette.intensity.value = Mathf.PingPong(Time.time * 2, 0.7f);
+        chrome.intensity.value = Mathf.PingPong(Time.time * 2, 1);
     }
 }

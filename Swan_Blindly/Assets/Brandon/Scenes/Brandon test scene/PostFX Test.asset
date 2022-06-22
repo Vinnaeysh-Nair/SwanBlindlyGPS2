@@ -55,7 +55,7 @@ MonoBehaviour:
     m_Value: 0
   saturation:
     m_OverrideState: 1
-    m_Value: -32
+    m_Value: -100
 --- !u!114 &-3000960020910782457
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
-  m_Name: PostFX Profile
+  m_Name: PostFX Test
   m_EditorClassIdentifier: 
   components:
   - {fileID: 2987353114197507454}
@@ -123,6 +123,7 @@ MonoBehaviour:
   - {fileID: -3000960020910782457}
   - {fileID: 8407002350085726802}
   - {fileID: 9031953188473374180}
+  - {fileID: 6664493970074180437}
 --- !u!114 &2987353114197507454
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -139,6 +140,22 @@ MonoBehaviour:
   mode:
     m_OverrideState: 1
     m_Value: 2
+--- !u!114 &6664493970074180437
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81180773991d8724ab7f2d216912b564, type: 3}
+  m_Name: ChromaticAberration
+  m_EditorClassIdentifier: 
+  active: 1
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0
 --- !u!114 &7042531873711551232
 MonoBehaviour:
   m_ObjectHideFlags: 3
