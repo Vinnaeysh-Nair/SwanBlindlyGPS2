@@ -18,10 +18,10 @@ MonoBehaviour:
     value: 1
   filtering:
     overrideState: 1
-    value: {x: 19.06645, y: 33.29914}
+    value: {x: 16.015865, y: 85.15907}
   minLuminance:
     overrideState: 1
-    value: -2.08
+    value: -2
   maxLuminance:
     overrideState: 1
     value: 0.1
@@ -29,7 +29,7 @@ MonoBehaviour:
     overrideState: 1
     value: 0.6
   eyeAdaptation:
-    overrideState: 0
+    overrideState: 1
     value: 0
   speedUp:
     overrideState: 0
@@ -134,19 +134,19 @@ MonoBehaviour:
     value: 1
   temperature:
     overrideState: 1
-    value: -17
+    value: -14
   tint:
     overrideState: 1
-    value: 32
+    value: 10
   colorFilter:
     overrideState: 1
     value: {r: 1, g: 1, b: 1, a: 1}
   hueShift:
     overrideState: 1
-    value: -13
+    value: -8
   saturation:
     overrideState: 1
-    value: -17
+    value: 23
   brightness:
     overrideState: 0
     value: 0
@@ -155,22 +155,22 @@ MonoBehaviour:
     value: 0
   contrast:
     overrideState: 1
-    value: 4
+    value: -20
   mixerRedOutRedIn:
-    overrideState: 1
-    value: 100
+    overrideState: 0
+    value: 0
   mixerRedOutGreenIn:
-    overrideState: 1
-    value: -12
+    overrideState: 0
+    value: 0
   mixerRedOutBlueIn:
-    overrideState: 1
-    value: 7
+    overrideState: 0
+    value: 0
   mixerGreenOutRedIn:
     overrideState: 0
     value: 0
   mixerGreenOutGreenIn:
     overrideState: 0
-    value: 100
+    value: 0
   mixerGreenOutBlueIn:
     overrideState: 0
     value: 0
@@ -182,16 +182,16 @@ MonoBehaviour:
     value: 0
   mixerBlueOutBlueIn:
     overrideState: 0
-    value: 100
+    value: 0
   lift:
     overrideState: 0
-    value: {x: 1, y: 1, z: 1, w: 0}
+    value: {x: 0.6023257, y: 0.9538149, z: 1, w: 0}
   gamma:
     overrideState: 0
-    value: {x: 1, y: 1, z: 1, w: 0}
+    value: {x: 1, y: 0.89627445, z: 0.71572286, w: 0}
   gain:
     overrideState: 0
-    value: {x: 1, y: 1, z: 1, w: 0}
+    value: {x: 0.97997135, y: 0.95155555, z: 1, w: 0}
   masterCurve:
     overrideState: 0
     value:
