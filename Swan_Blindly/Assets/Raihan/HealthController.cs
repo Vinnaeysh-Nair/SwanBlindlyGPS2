@@ -38,6 +38,7 @@ public class HealthController : MonoBehaviour
         Color splatterAlpha = redSplatterImage.color;
         splatterAlpha.a = 1 - (currentPlayerHealth / maxPlayerHealth);
         redSplatterImage.color = splatterAlpha;
+        
     }
 
     //IEnumerator HurtFlash()
