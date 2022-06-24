@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class Push : MonoBehaviour
 {
-    GameObject box;
-
-
+    
     void Start()
     {
         
