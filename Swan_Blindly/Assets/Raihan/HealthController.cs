@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
+
 
 public class HealthController : MonoBehaviour
 {
+
     [Header("Player Health Amount")]
     public float currentPlayerHealth = 100.0f;
     [SerializeField] private float maxPlayerHealth = 100.0f;
@@ -15,9 +19,9 @@ public class HealthController : MonoBehaviour
     [Header("Add Blood Splatter Image")]
     [SerializeField] private Image redSplatterImage = null;
 
-    //[Header("Add Hurt Image")]
-    //[SerializeField] private Image hurtImage = null;
-    //[SerializeField] private float hurtTimer = 0.1f;
+    [Header("Add Hurt Image")]
+    [SerializeField] private Image hurtImage = null;
+    [SerializeField] private float hurtTimer = 0.1f;
 
     [Header("Heal Timer")]
     [SerializeField] private float healCooldown = 3.0f;
@@ -38,22 +42,23 @@ public class HealthController : MonoBehaviour
         Color splatterAlpha = redSplatterImage.color;
         splatterAlpha.a = 1 - (currentPlayerHealth / maxPlayerHealth);
         redSplatterImage.color = splatterAlpha;
+       
     }
 
-    //IEnumerator HurtFlash()
-    //{
-    //    hurtImage.enabled = true;
-    //    healthAudioSource.PlayOneShot(hurtAudio);
-    //    yield return new WaitForSeconds(hurtTimer);
-    //    hurtImage.enabled = false;
-    //}
+    IEnumerator HurtFlash()
+    {
+        hurtImage.enabled = true;
+        //healthAudioSource.PlayOneShot(hurtAudio);
+        yield return new WaitForSeconds(hurtTimer);
+        hurtImage.enabled = false;
+    }
 
     public void TakeDamage()
     {
         if(currentPlayerHealth >= 0)
         {
             canRegen = false;
-           // StartCoroutine(HurtFlash());
+            StartCoroutine(HurtFlash());
             UpdateHealth();
             healCooldown = maxHealCooldown;
             startCooldown = true;
@@ -62,6 +67,7 @@ public class HealthController : MonoBehaviour
 
     private void Update()
     {
+
         if (startCooldown)
         {
             healCooldown -= Time.deltaTime;
@@ -87,9 +93,9 @@ public class HealthController : MonoBehaviour
             }
         }
 
-        if (currentPlayerHealth == 0)
-        {
-            SceneManager.LoadScene("LoseScreen");
-        }
+        //if (currentPlayerHealth == 0)
+        //{
+        //    SceneManager.LoadScene("LoseScreen");
+        //}
     }
 }
