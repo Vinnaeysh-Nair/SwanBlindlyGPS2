@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 public class HealthController : MonoBehaviour
 {
     [Header("Player Health Amount")]
-    public float currentPlayerHealth = 100.0f;
-    [SerializeField] private float maxPlayerHealth = 100.0f;
+    public static float currentPlayerHealth = 100.0f;
+    [SerializeField] public static float maxPlayerHealth = 100.0f;
     [SerializeField] private int regenRate = 1;
     private bool canRegen = false;
 
@@ -52,6 +52,7 @@ public class HealthController : MonoBehaviour
     {
         if(currentPlayerHealth >= 0)
         {
+            PostProcessingManager.ID = 1;
             canRegen = false;
            // StartCoroutine(HurtFlash());
             UpdateHealth();
@@ -69,6 +70,7 @@ public class HealthController : MonoBehaviour
             {
                 canRegen = true;
                 startCooldown = false;
+                PostProcessingManager.ID = 0;
             }
         }
 

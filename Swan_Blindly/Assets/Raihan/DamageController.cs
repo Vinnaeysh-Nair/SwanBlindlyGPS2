@@ -22,7 +22,7 @@ public class DamageController : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             bombAudioSource.PlayOneShot(bombAudio);
-            _healthController.currentPlayerHealth -= bombDamage;
+            HealthController.currentPlayerHealth -= bombDamage;
             _healthController.TakeDamage();
             gameObject.GetComponent<BoxCollider>().enabled = false;
             playingAudio = true;
