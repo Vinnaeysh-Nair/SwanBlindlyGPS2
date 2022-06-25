@@ -8,9 +8,13 @@ public class DamageController : MonoBehaviour
 
     [SerializeField] private HealthController _healthController = null;
 
+    [SerializeField] private PostProcessingManager _postProcessingManager = null;
+
     [SerializeField] private AudioClip bombAudio = null;
     private bool playingAudio;
     private AudioSource bombAudioSource;
+
+    public static bool collided = false;
 
     private void Start()
     {
@@ -21,11 +25,23 @@ public class DamageController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            collided = true;
+            Debug.Log(collided);
+            _postProcessingManager.TakeDamage();
             bombAudioSource.PlayOneShot(bombAudio);
-            HealthController.currentPlayerHealth -= bombDamage;
+            _healthController.currentPlayerHealth -= bombDamage;
             _healthController.TakeDamage();
             gameObject.GetComponent<BoxCollider>().enabled = false;
             playingAudio = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            collided = false;
+            Debug.Log(collided);
         }
     }
 
@@ -39,4 +55,6 @@ public class DamageController : MonoBehaviour
             }
         }
     }
+
+    
 }

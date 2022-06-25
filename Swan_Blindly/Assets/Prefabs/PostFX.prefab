@@ -9,7 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6904166183047433886}
-  - component: {fileID: 6904166183053755173}
+  - component: {fileID: 2121560753}
+  - component: {fileID: 5031490622275979154}
   m_Layer: 6
   m_Name: PostFX
   m_TagString: Untagged
@@ -32,7 +33,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6904166183053755173
+--- !u!114 &2121560753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6904166183047433881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a8cb225dd58ae74fa7af5585ff731bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: {fileID: 5031490622275979154}
+  profiles:
+  - {fileID: 11400000, guid: 715de4a6df8799f479dc9f5113f59ecf, type: 2}
+  - {fileID: 11400000, guid: 091621e9dca5f044caa78db97e1cc24e, type: 2}
+  _healthController: {fileID: 0}
+--- !u!114 &5031490622275979154
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48,4 +66,4 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: f75f4d9264e190c44a4f4b031cd8b3ec, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 715de4a6df8799f479dc9f5113f59ecf, type: 2}
