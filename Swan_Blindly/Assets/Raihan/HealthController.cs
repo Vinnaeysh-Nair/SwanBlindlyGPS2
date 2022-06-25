@@ -7,10 +7,11 @@ using UnityEngine.SceneManagement;
 public class HealthController : MonoBehaviour
 {
     [Header("Player Health Amount")]
-    public static float currentPlayerHealth = 100.0f;
-    [SerializeField] public static float maxPlayerHealth = 100.0f;
+    public static float VignetteIntensity;
+    public float currentPlayerHealth = 100.0f;
+    [SerializeField] public float maxPlayerHealth = 100.0f;
     [SerializeField] private int regenRate = 1;
-    private bool canRegen = false;
+    public static bool canRegen = false;
 
     [Header("Add Blood Splatter Image")]
     [SerializeField] private Image redSplatterImage = null;
@@ -24,6 +25,7 @@ public class HealthController : MonoBehaviour
     [SerializeField] private float maxHealCooldown = 3.0f;
     [SerializeField] private bool startCooldown = false;
 
+
     //[Header("Audio Name")]
     //[SerializeField] private AudioClip hurtAudio = null;
     //private AudioSource healthAudioSource;
@@ -31,6 +33,7 @@ public class HealthController : MonoBehaviour
     private void Start()
     {
         //healthAudioSource = GetComponent<AudioSource>();
+        VignetteIntensity = currentPlayerHealth/maxPlayerHealth;
     }
 
     void UpdateHealth()
@@ -52,7 +55,6 @@ public class HealthController : MonoBehaviour
     {
         if(currentPlayerHealth >= 0)
         {
-            PostProcessingManager.ID = 1;
             canRegen = false;
            // StartCoroutine(HurtFlash());
             UpdateHealth();
@@ -70,7 +72,6 @@ public class HealthController : MonoBehaviour
             {
                 canRegen = true;
                 startCooldown = false;
-                PostProcessingManager.ID = 0;
             }
         }
 

@@ -8,21 +8,24 @@ public class PostProcessingManager : MonoBehaviour
 {
     //intisialing Volume profiles
     public Volume volume;
-    public static VolumeProfile[] profiles;
-    public static int ID = 0;
+    public VolumeProfile[] profiles;
+    public int ID = 0;
 
     // Getting individual Post FX values 
     Vignette vignette;
-
     Bloom bloom;
     ChromaticAberration chrome;
-
 
     void Start()
     {
         volume.profile.TryGet<Bloom>(out bloom);
         volume.profile.TryGet<Vignette>(out vignette);
         volume.profile.TryGet<ChromaticAberration>(out chrome);
+    }
+
+    private void Update()
+    {
+        Debug.Log(ID);
     }
 
     void FixedUpdate()
@@ -35,15 +38,37 @@ public class PostProcessingManager : MonoBehaviour
             volume.profile.TryGet<ChromaticAberration>(out chrome);
         }
 
-        if (ID == 1 && vignette != null)
+        TakeDamage();
+        //Tutorial container Lighting
+        //if(ID == 2)
+        //bloom.intensity.value = Mathf.PingPong(Time.time * 2, 5);
+        //vignette.intensity.value = Mathf.PingPong(Time.time * 2, 0.7f);
+        //chrome.intensity.value = Mathf.PingPong(Time.time * 2, 1);
+    }
+
+    public void TakeDamage()
+    {
+        if(DamageController.collided == true)
         {
+            ID = 1;
+            volume.profile = profiles[ID];
             vignette.color.value = Color.red;
-            vignette.intensity.value  = 1 - (HealthController.currentPlayerHealth/ HealthController.maxPlayerHealth);
+            vignette.intensity.value = 1 - HealthController.VignetteIntensity;
         }
 
+        if (DamageController.collided == false)
+        {
+            //StartCoroutine(resetVolumeProfile());
+            ID = 0;
+            volume.profile = profiles[ID];
+            vignette.color.value = Color.black;
+            vignette.intensity.value = 0.17f;
 
-        bloom.intensity.value = Mathf.PingPong(Time.time * 2, 5);
-        vignette.intensity.value = Mathf.PingPong(Time.time * 2, 0.7f);
-        chrome.intensity.value = Mathf.PingPong(Time.time * 2, 1);
+        }
+    }
+
+    IEnumerator resetVolumeProfile()
+    {
+        yield return new WaitForSeconds(2);
     }
 }
