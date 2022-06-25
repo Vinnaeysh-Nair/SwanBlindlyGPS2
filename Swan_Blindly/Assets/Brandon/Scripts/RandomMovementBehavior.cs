@@ -7,10 +7,15 @@ public class RandomMovementBehavior : MonoBehaviour
     public float movementSpeed = 20f;
     public float rotationSpeed = 100f;
 
+    public float xBoundary;
+    public float zBoundary;
+
     private bool isWandering = false;
     private bool isRotatingLeft = false;
     private bool isRotatingRight = false;
     private bool isWalking = false;
+
+  
 
     Rigidbody rb;
    // Animator anim;
@@ -47,6 +52,18 @@ public class RandomMovementBehavior : MonoBehaviour
         {
             //anim.SetBool("Walk", false);
         }
+
+        if(transform.position.x > xBoundary)
+        {
+            transform.position = new Vector3(xBoundary, transform.position.y, transform.position.z);
+        }
+
+        if (transform.position.z > -zBoundary)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, zBoundary);
+        }
+
+
     }
 
     IEnumerator walkAround()
