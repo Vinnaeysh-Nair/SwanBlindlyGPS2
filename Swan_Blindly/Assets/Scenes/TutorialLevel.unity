@@ -643,7 +643,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4347936980362981900, guid: 879d4b5f83759f648af4537dda1c3b97, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 41.66
+      value: 38
       objectReference: {fileID: 0}
     - target: {fileID: 4347936980362981900, guid: 879d4b5f83759f648af4537dda1c3b97, type: 3}
       propertyPath: m_LocalPosition.y
@@ -651,7 +651,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4347936980362981900, guid: 879d4b5f83759f648af4537dda1c3b97, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 68.42
+      value: 68.7
       objectReference: {fileID: 0}
     - target: {fileID: 4347936980362981900, guid: 879d4b5f83759f648af4537dda1c3b97, type: 3}
       propertyPath: m_LocalRotation.w
@@ -864,6 +864,7 @@ GameObject:
   - component: {fileID: 1604058718}
   - component: {fileID: 1604058717}
   - component: {fileID: 1604058721}
+  - component: {fileID: 1604058722}
   m_Layer: 0
   m_Name: Water
   m_TagString: Untagged
@@ -880,7 +881,7 @@ MeshCollider:
   m_GameObject: {fileID: 1604058716}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -966,6 +967,19 @@ MonoBehaviour:
   _healthController: {fileID: 2093128715}
   _postProcessingManager: {fileID: 2121560756}
   bombAudio: {fileID: 8300000, guid: 5e52fbeea5f93534c88ac3ee1dcedcbe, type: 3}
+--- !u!65 &1604058722
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604058716}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 2.220446e-16, z: 10.000001}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1828888000
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ public class PostProcessingManager : MonoBehaviour
     public int ID = 0;
 
     // Getting individual Post FX values 
-    Vignette vignette;
+    public static Vignette vignette;
     Bloom bloom;
     ChromaticAberration chrome;
 
@@ -48,22 +48,18 @@ public class PostProcessingManager : MonoBehaviour
 
     public void TakeDamage()
     {
-        if(DamageController.collided == true)
+        if(DamageController.collided == true && vignette != null)
         {
-            ID = 1;
-            volume.profile = profiles[ID];
+            volume.profile = profiles[1];
             vignette.color.value = Color.red;
             vignette.intensity.value = 1 - HealthController.VignetteIntensity;
         }
 
-        if (DamageController.collided == false)
+        if (DamageController.collided == false && vignette != null)
         {
-            //StartCoroutine(resetVolumeProfile());
-            ID = 0;
-            volume.profile = profiles[ID];
+            volume.profile = profiles[0];
             vignette.color.value = Color.black;
             vignette.intensity.value = 0.17f;
-
         }
     }
 
