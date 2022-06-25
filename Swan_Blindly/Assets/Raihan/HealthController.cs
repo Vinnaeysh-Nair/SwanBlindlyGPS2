@@ -33,7 +33,6 @@ public class HealthController : MonoBehaviour
     private void Start()
     {
         //healthAudioSource = GetComponent<AudioSource>();
-        VignetteIntensity = currentPlayerHealth/maxPlayerHealth;
     }
 
     void UpdateHealth()
@@ -65,6 +64,8 @@ public class HealthController : MonoBehaviour
 
     private void Update()
     {
+
+        Debug.Log("Current Health: " + currentPlayerHealth / maxPlayerHealth);
         if (startCooldown)
         {
             healCooldown -= Time.deltaTime;

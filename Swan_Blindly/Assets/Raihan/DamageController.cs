@@ -27,9 +27,9 @@ public class DamageController : MonoBehaviour
         {
             collided = true;
             Debug.Log(collided);
-            _postProcessingManager.TakeDamage();
             bombAudioSource.PlayOneShot(bombAudio);
             _healthController.currentPlayerHealth -= bombDamage;
+            _postProcessingManager.TakeDamage();
             _healthController.TakeDamage();
             gameObject.GetComponent<BoxCollider>().enabled = false;
             playingAudio = true;
