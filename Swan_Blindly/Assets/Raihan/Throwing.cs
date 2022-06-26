@@ -32,12 +32,8 @@ public class Throwing : MonoBehaviour
     {
         if(Input.GetKeyDown(throwkey) && readyToThrow && totalThrows > 0)
         {
-            line.enabled = true;
-            while (line == true)
-            {
-                Throw();
-            }
-            //Throw ();
+            line.enabled = true;           
+            Throw ();
         }
     }
 
