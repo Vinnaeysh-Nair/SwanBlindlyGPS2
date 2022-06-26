@@ -33,14 +33,17 @@ public class Throwing : MonoBehaviour
         if(Input.GetKeyDown(throwkey) && readyToThrow && totalThrows > 0)
         {
             line.enabled = true;
-            Throw ();
+            while (line == true)
+            {
+                Throw();
+            }
+            //Throw ();
         }
     }
 
     private void Throw()
     {
         readyToThrow = false;
-        line.enabled = false;
 
         //Instantiate object to throw
         GameObject projectile = Instantiate(objectToThrow, throwingPoint.position, cam.rotation);

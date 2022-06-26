@@ -396,7 +396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2219561619297615378, guid: e945a7ab0c031de43bbbeb28cbd394ed, type: 3}
       propertyPath: field of view
-      value: 38.1
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 2219561619297615378, guid: e945a7ab0c031de43bbbeb28cbd394ed, type: 3}
       propertyPath: m_FocalLength
@@ -408,15 +408,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3991728330639369404, guid: e945a7ab0c031de43bbbeb28cbd394ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.9546003
+      value: 3.1345572
       objectReference: {fileID: 0}
     - target: {fileID: 3991728330639369404, guid: e945a7ab0c031de43bbbeb28cbd394ed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8099899
+      value: -0.5099945
       objectReference: {fileID: 0}
     - target: {fileID: 3991728330639369404, guid: e945a7ab0c031de43bbbeb28cbd394ed, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.332897
+      value: 4.1138725
       objectReference: {fileID: 0}
     - target: {fileID: 3991728330639369404, guid: e945a7ab0c031de43bbbeb28cbd394ed, type: 3}
       propertyPath: m_LocalRotation.w
@@ -992,7 +992,7 @@ LineRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1373763974}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1147,7 +1147,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0555556, y: 1}
+    m_SensorSize: {x: 1.7774295, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1750,7 +1750,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1768497701}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
   m_Name: 
@@ -1772,7 +1772,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0555556, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
