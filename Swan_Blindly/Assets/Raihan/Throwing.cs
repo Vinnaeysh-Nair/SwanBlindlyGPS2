@@ -44,7 +44,6 @@ public class Throwing : MonoBehaviour
             Throw();
             mainCamera.SetActive(true);
             aimCamera.SetActive(false);
-
         }
 
     }
