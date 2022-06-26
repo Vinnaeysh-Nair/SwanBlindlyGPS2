@@ -20,15 +20,19 @@ public class Throwing : MonoBehaviour
 
     bool readyToThrow;
 
+    private LineRenderer line;
+
     private void Start()
     {
         readyToThrow = true;
+        line = GetComponent<LineRenderer>();
     }
 
     private void Update()
     {
         if(Input.GetKeyDown(throwkey) && readyToThrow && totalThrows > 0)
         {
+            line.enabled = true;
             Throw ();
         }
     }
@@ -36,6 +40,7 @@ public class Throwing : MonoBehaviour
     private void Throw()
     {
         readyToThrow = false;
+        line.enabled = false;
 
         //Instantiate object to throw
         GameObject projectile = Instantiate(objectToThrow, throwingPoint.position, cam.rotation);
