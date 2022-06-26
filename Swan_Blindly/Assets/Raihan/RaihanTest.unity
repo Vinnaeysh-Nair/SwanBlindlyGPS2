@@ -980,11 +980,13 @@ MonoBehaviour:
   cam: {fileID: 625453655}
   throwingPoint: {fileID: 1624218307}
   objectToThrow: {fileID: 8911150754022345813, guid: 42cdc4c82639b684583618b242667ec1, type: 3}
-  totalThrows: 100
+  totalThrows: 5
   throwCooldown: 1
   throwkey: 323
   throwForce: 5
   throwUpwardForce: 10
+  mainCamera: {fileID: 1890039797}
+  aimCamera: {fileID: 1768497701}
 --- !u!120 &1373763978
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -1147,7 +1149,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7774295, y: 1}
+    m_SensorSize: {x: 1.7774647, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1742,7 +1744,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1768497702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1750,7 +1752,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1768497701}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
   m_Name: 
@@ -1772,7 +1774,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.7774647, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1804,7 +1806,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1768497701}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d0e4c923005e814895a83a401b65912, type: 3}
   m_Name: 
@@ -2043,7 +2045,7 @@ MonoBehaviour:
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
     m_Style: 1
-    m_Time: 2
+    m_Time: 0.5
     m_CustomCurve:
       serializedVersion: 2
       m_Curve: []

@@ -18,6 +18,9 @@ public class Throwing : MonoBehaviour
     public float throwForce;
     public float throwUpwardForce;
 
+    public GameObject mainCamera;
+    public GameObject aimCamera;
+
     bool readyToThrow;
 
     private LineRenderer line;
@@ -30,17 +33,26 @@ public class Throwing : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(throwkey) && readyToThrow && totalThrows > 0)
-        {           
-            Throw ();
-            line.enabled = false;
+        if(Input.GetKeyDown(throwkey) && readyToThrow && totalThrows > 0 && !aimCamera.activeInHierarchy)
+        {
+            line.enabled = true;
+            mainCamera.SetActive(false);
+            aimCamera.SetActive(true);
         }
+        if(Input.GetKeyUp(throwkey) && readyToThrow && totalThrows > 0 && !mainCamera.activeInHierarchy)
+        {
+            Throw();
+            mainCamera.SetActive(true);
+            aimCamera.SetActive(false);
+
+        }
+
     }
 
     private void Throw()
     {
         readyToThrow = false;
-        line.enabled = true;
+        line.enabled = false;
 
         //Instantiate object to throw
         GameObject projectile = Instantiate(objectToThrow, throwingPoint.position, cam.rotation);
