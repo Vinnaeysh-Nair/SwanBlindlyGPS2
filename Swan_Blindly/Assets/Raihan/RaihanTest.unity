@@ -985,7 +985,7 @@ MonoBehaviour:
   throwkey: 323
   throwForce: 5
   throwUpwardForce: 10
-  mainCamera: {fileID: 1890039797}
+  mainCamera: {fileID: 1390553050}
   aimCamera: {fileID: 1768497701}
 --- !u!120 &1373763978
 LineRenderer:
