@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3d9d2dd02cc720b45af183797b9f1cef
+guid: cf14159f5b76e6e4c8616980b4adc1b1
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
@@ -7,17 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material #3
-    second: {fileID: 2100000, guid: 81416374a3e72ef4ba466025069e7297, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material #4
-<<<<<<< Updated upstream:Swan_Blindly/Assets/3d Models/Trees/Big tree.fbx.meta
-    second: {fileID: 2100000, guid: 8bf5d88a775dd2449bd2b0c52421ce68, type: 2}
-=======
-    second: {fileID: 2100000, guid: 32a4fd4845f7e8845a0bee0e7392b38e, type: 2}
->>>>>>> Stashed changes:Swan_Blindly/Assets/3d Models/Trees/Old Trees/Big tree.fbx.meta
+      name: baked_07 - Default
+    second: {fileID: 2100000, guid: 1cbf3a39ed74d6746a5e9bdeeb9c2a9f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
