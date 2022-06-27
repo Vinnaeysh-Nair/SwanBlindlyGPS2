@@ -262,7 +262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentPlayerHealth: 100
   maxPlayerHealth: 100
-  regenRate: 20
+  regenRate: 1
   redSplatterImage: {fileID: 1903076250}
   healCooldown: 3
   maxHealCooldown: 3
@@ -378,6 +378,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &528883996 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2121560753, guid: 719f0333bd43c464bac4976256afa466, type: 3}
+  m_PrefabInstance: {fileID: 1634210169}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a8cb225dd58ae74fa7af5585ff731bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &532600562 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5557156229302997259, guid: e945a7ab0c031de43bbbeb28cbd394ed, type: 3}
@@ -472,7 +483,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3991728330639369404, guid: e945a7ab0c031de43bbbeb28cbd394ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.1345572
+      value: 2.4719863
       objectReference: {fileID: 0}
     - target: {fileID: 3991728330639369404, guid: e945a7ab0c031de43bbbeb28cbd394ed, type: 3}
       propertyPath: m_LocalPosition.y
@@ -480,7 +491,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3991728330639369404, guid: e945a7ab0c031de43bbbeb28cbd394ed, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.1138725
+      value: 3.9524262
       objectReference: {fileID: 0}
     - target: {fileID: 3991728330639369404, guid: e945a7ab0c031de43bbbeb28cbd394ed, type: 3}
       propertyPath: m_LocalRotation.w
@@ -506,9 +517,13 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5557156228876282944, guid: e945a7ab0c031de43bbbeb28cbd394ed, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5557156228876282945, guid: e945a7ab0c031de43bbbeb28cbd394ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.752579
+      value: 3.09
       objectReference: {fileID: 0}
     - target: {fileID: 5557156228876282945, guid: e945a7ab0c031de43bbbeb28cbd394ed, type: 3}
       propertyPath: m_LocalPosition.y
@@ -516,7 +531,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5557156228876282945, guid: e945a7ab0c031de43bbbeb28cbd394ed, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.6914501
+      value: 1.53
       objectReference: {fileID: 0}
     - target: {fileID: 5557156228876282945, guid: e945a7ab0c031de43bbbeb28cbd394ed, type: 3}
       propertyPath: m_LocalRotation.w
@@ -738,6 +753,10 @@ PrefabInstance:
       propertyPath: _healthController
       value: 
       objectReference: {fileID: 266281841}
+    - target: {fileID: 8193500238284296329, guid: cb97a62593f9fb640b28a1ef474cf029, type: 3}
+      propertyPath: _postProcessingManager
+      value: 
+      objectReference: {fileID: 528883996}
     - target: {fileID: 9062192112218139225, guid: cb97a62593f9fb640b28a1ef474cf029, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -986,6 +1005,10 @@ PrefabInstance:
       propertyPath: _healthController
       value: 
       objectReference: {fileID: 266281841}
+    - target: {fileID: 8193500238284296329, guid: cb97a62593f9fb640b28a1ef474cf029, type: 3}
+      propertyPath: _postProcessingManager
+      value: 
+      objectReference: {fileID: 528883996}
     - target: {fileID: 9062192112218139225, guid: cb97a62593f9fb640b28a1ef474cf029, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -1187,7 +1210,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1254,7 +1277,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1390553050}
   m_LocalRotation: {x: 0.07062795, y: -0.05863712, z: 0.004164481, w: 0.99576914}
-  m_LocalPosition: {x: 185.2834, y: 123.304726, z: -71.1004}
+  m_LocalPosition: {x: 185.96413, y: 123.304726, z: -71.05944}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1777,6 +1800,10 @@ PrefabInstance:
     - target: {fileID: 6904166183047433881, guid: 719f0333bd43c464bac4976256afa466, type: 3}
       propertyPath: m_Name
       value: PostFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904166183047433881, guid: 719f0333bd43c464bac4976256afa466, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6904166183047433886, guid: 719f0333bd43c464bac4976256afa466, type: 3}
       propertyPath: m_RootOrder
@@ -2443,6 +2470,10 @@ PrefabInstance:
       propertyPath: _healthController
       value: 
       objectReference: {fileID: 266281841}
+    - target: {fileID: 8193500238284296329, guid: cb97a62593f9fb640b28a1ef474cf029, type: 3}
+      propertyPath: _postProcessingManager
+      value: 
+      objectReference: {fileID: 528883996}
     - target: {fileID: 9062192112218139225, guid: cb97a62593f9fb640b28a1ef474cf029, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -2512,6 +2543,10 @@ PrefabInstance:
       propertyPath: _healthController
       value: 
       objectReference: {fileID: 266281841}
+    - target: {fileID: 8193500238284296329, guid: cb97a62593f9fb640b28a1ef474cf029, type: 3}
+      propertyPath: _postProcessingManager
+      value: 
+      objectReference: {fileID: 528883996}
     - target: {fileID: 9062192112218139225, guid: cb97a62593f9fb640b28a1ef474cf029, type: 3}
       propertyPath: m_RootOrder
       value: 9

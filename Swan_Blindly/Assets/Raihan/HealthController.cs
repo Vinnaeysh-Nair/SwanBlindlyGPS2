@@ -67,7 +67,6 @@ public class HealthController : MonoBehaviour
     private void Update()
     {
 
-        Debug.Log("Current Health: " + currentPlayerHealth / maxPlayerHealth);
         if (startCooldown)
         {
             healCooldown -= Time.deltaTime;
@@ -93,9 +92,9 @@ public class HealthController : MonoBehaviour
             }
         }
 
-        if (currentPlayerHealth == 0)
+       /*if (currentPlayerHealth == 0)
         {
             SceneManager.LoadScene("LoseScreen");
-        }
+        }*/
     }
 }
