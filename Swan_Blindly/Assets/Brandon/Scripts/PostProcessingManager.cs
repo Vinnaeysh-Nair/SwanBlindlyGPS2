@@ -16,6 +16,11 @@ public class PostProcessingManager : MonoBehaviour
     Bloom bloom;
     ChromaticAberration chrome;
 
+
+    //Setting variables
+    public int resetProfileTimer = 5;
+
+
     void Start()
     {
         volume.profile.TryGet<Bloom>(out bloom);
@@ -30,15 +35,28 @@ public class PostProcessingManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(volume.profile != profiles[ID])
+        if (volume.profile != profiles[ID])
         {
             volume.profile = profiles[ID];
             volume.profile.TryGet<Bloom>(out bloom);
             volume.profile.TryGet<Vignette>(out vignette);
             volume.profile.TryGet<ChromaticAberration>(out chrome);
+            vignette.color.value = Color.black;
+            vignette.intensity.value = 0.267f;
+
         }
 
-        TakeDamage();
+        if (DamageController.collided == true)
+        {
+            volume.profile = profiles[0];
+            vignette.color.value = Color.red;
+            vignette.intensity.value = Mathf.PingPong(Time.time * 0.2f, 0.3f);
+        }
+        else if (DamageController.collided == false)
+        {
+            volume.profile = profiles[1];
+        }
+
         //Tutorial container Lighting
         //if(ID == 2)
         //bloom.intensity.value = Mathf.PingPong(Time.time * 2, 5);
@@ -46,25 +64,8 @@ public class PostProcessingManager : MonoBehaviour
         //chrome.intensity.value = Mathf.PingPong(Time.time * 2, 1);
     }
 
-    public void TakeDamage()
+    IEnumerator changingVolumeProfile()
     {
-        if(DamageController.collided == true && vignette != null)
-        {
-            volume.profile = profiles[1];
-            vignette.color.value = Color.red;
-            vignette.intensity.value = 1 - HealthController.VignetteIntensity;
-        }
-
-        if (DamageController.collided == false && vignette != null)
-        {
-            volume.profile = profiles[0];
-            vignette.color.value = Color.black;
-            vignette.intensity.value = 0.17f;
-        }
-    }
-
-    IEnumerator resetVolumeProfile()
-    {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(resetProfileTimer);
     }
 }
