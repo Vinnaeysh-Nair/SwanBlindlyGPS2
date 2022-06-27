@@ -47,9 +47,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volume: {fileID: 5031490622275979154}
   profiles:
-  - {fileID: 11400000, guid: 715de4a6df8799f479dc9f5113f59ecf, type: 2}
-  - {fileID: 11400000, guid: 091621e9dca5f044caa78db97e1cc24e, type: 2}
-  _healthController: {fileID: 0}
+  - {fileID: 11400000, guid: a1d24522d17903f4d96054f03c4df1a2, type: 2}
+  - {fileID: 11400000, guid: 4a91e42fb112d5c43a80662d629eea1c, type: 2}
+  - {fileID: 11400000, guid: c43c32575a3f1f84da3a1a34ba4dacb3, type: 2}
+  ID: 0
+  resetProfileTimer: 5
 --- !u!114 &5031490622275979154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,4 +68,4 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: 715de4a6df8799f479dc9f5113f59ecf, type: 2}
+  sharedProfile: {fileID: 11400000, guid: a1d24522d17903f4d96054f03c4df1a2, type: 2}
