@@ -15,7 +15,11 @@ ModelImporter:
       name: Material #4
 <<<<<<< Updated upstream:Swan_Blindly/Assets/3d Models/Trees/Big tree.fbx.meta
 <<<<<<< Updated upstream:Swan_Blindly/Assets/3d Models/Trees/Big tree.fbx.meta
+<<<<<<< Updated upstream:Swan_Blindly/Assets/3d Models/Trees/Big tree.fbx.meta
     second: {fileID: 2100000, guid: 8bf5d88a775dd2449bd2b0c52421ce68, type: 2}
+=======
+    second: {fileID: 2100000, guid: 32a4fd4845f7e8845a0bee0e7392b38e, type: 2}
+>>>>>>> Stashed changes:Swan_Blindly/Assets/3d Models/Trees/Old Trees/Big tree.fbx.meta
 =======
     second: {fileID: 2100000, guid: 32a4fd4845f7e8845a0bee0e7392b38e, type: 2}
 >>>>>>> Stashed changes:Swan_Blindly/Assets/3d Models/Trees/Old Trees/Big tree.fbx.meta
