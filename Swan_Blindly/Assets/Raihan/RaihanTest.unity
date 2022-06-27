@@ -980,7 +980,7 @@ MonoBehaviour:
   cam: {fileID: 625453655}
   throwingPoint: {fileID: 1624218307}
   objectToThrow: {fileID: 8911150754022345813, guid: 42cdc4c82639b684583618b242667ec1, type: 3}
-  totalThrows: 5
+  totalThrows: 10
   throwCooldown: 1
   throwkey: 323
   throwForce: 5
