@@ -4659,17 +4659,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6457310587330997859, guid: 1ef181ebeb144f84db90dd913d834c30, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6457310587330997869, guid: 1ef181ebeb144f84db90dd913d834c30, type: 3}
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
     - target: {fileID: 6457310587467410405, guid: 1ef181ebeb144f84db90dd913d834c30, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 6457310587467410405, guid: 1ef181ebeb144f84db90dd913d834c30, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 6457310587467410405, guid: 1ef181ebeb144f84db90dd913d834c30, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 120
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6457310587467410405, guid: 1ef181ebeb144f84db90dd913d834c30, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 100
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6457310587886701966, guid: 1ef181ebeb144f84db90dd913d834c30, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6457310587886701966, guid: 1ef181ebeb144f84db90dd913d834c30, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ef181ebeb144f84db90dd913d834c30, type: 3}
