@@ -12,16 +12,12 @@ public class ManagerControl : MonoBehaviour
      
 
     //move
-    //private GameObject joystickBg;
     private float inputX;
     private float inputZ;
     private Vector3 v_movement;
     [SerializeField] private float moveSpeed;
     private float gravity;
-    private bool isContType2;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         moveSpeed = 0.1f;
@@ -33,14 +29,10 @@ public class ManagerControl : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         inputX = JoyStickManager.inputHorizontal();
         inputZ = JoyStickManager.inputVertical();
-
-        //inputX = Input.GetAxis("Horizontal");
-        //inputZ = Input.GetAxis("Vertical");
 
 
     }
