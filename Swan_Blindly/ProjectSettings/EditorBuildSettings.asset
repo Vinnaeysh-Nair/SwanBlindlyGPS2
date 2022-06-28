@@ -9,12 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 9484d32ddcfbe8b47a8e6b042803db71
   - enabled: 1
-    path: Assets/Raihan/LoseScreen.unity
-    guid: a1cbf6b6777b0c2439aed7e570beb9bb
-  - enabled: 0
-    path: Assets/Raihan/RaihanTest.unity
-    guid: 235d6a27da49ab94793479bc050db8be
-  - enabled: 1
     path: Assets/Scenes/TutorialBackUp.unity
     guid: 5138c76c8cfa01e4bb07c95214844e70
   m_configObjects: {}
