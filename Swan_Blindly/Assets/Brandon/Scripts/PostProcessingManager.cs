@@ -62,7 +62,7 @@ public class PostProcessingManager : MonoBehaviour
         //Container Lighting 
         if (ContainerLightingTrigger.containterTrigger == true)
         {
-            volume.profile = profiles[3];
+            volume.profile = profiles[2];
         }
         else if (DamageController.collided == false)
         {
