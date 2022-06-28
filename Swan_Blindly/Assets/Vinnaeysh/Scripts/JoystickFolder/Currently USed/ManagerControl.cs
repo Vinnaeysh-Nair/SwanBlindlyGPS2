@@ -89,6 +89,7 @@ public class ManagerControl : MonoBehaviour
     {
         if (cController.isGrounded )
         {
+             
             v_movement.y = jumpSpeed;
             Debug.Log("Jumping");
         }
