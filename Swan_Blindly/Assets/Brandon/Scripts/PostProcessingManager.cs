@@ -57,6 +57,12 @@ public class PostProcessingManager : MonoBehaviour
             volume.profile = profiles[1];
         }
 
+        //Container Lighting 
+        if (ContainerCollided == true)
+        {
+
+        }
+
         //Tutorial container Lighting
         //if(ID == 2)
         //bloom.intensity.value = Mathf.PingPong(Time.time * 2, 5);
