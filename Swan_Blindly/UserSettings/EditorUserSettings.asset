@@ -6,6 +6,7 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedSceneGuid-0:
+<<<<<<< Updated upstream
       value: 5102010253545b0c090f587b11210644414e4b7e7b7124337d7c4d37e0b8363d
       flags: 0
     RecentlyUsedSceneGuid-1:
@@ -25,6 +26,27 @@ EditorUserSettings:
       flags: 0
     RecentlyUsedSceneGuid-6:
       value: 55520d560105500e0e5d082113755c44404e4e29297070347a2b4967b5b7616f
+=======
+      value: 5a5757560101590a5d0c0e24427b5d44434e4c7a7b7a23677f2b4565b7b5353a
+      flags: 0
+    RecentlyUsedSceneGuid-1:
+      value: 5601575051055b58595a5c7b477b0f44414e4d797d7a76657e7f4b66e3b2613b
+      flags: 0
+    RecentlyUsedSceneGuid-2:
+      value: 5102010253545b0c090f587b11210644414e4b7e7b7124337d7c4d37e0b8363d
+      flags: 0
+    RecentlyUsedSceneGuid-3:
+      value: 55520d560105500e0e5d082113755c44404e4e29297070347a2b4967b5b7616f
+      flags: 0
+    RecentlyUsedSceneGuid-4:
+      value: 5600075e06025f58550d0a2340725a441415487d2f7173627c7d4567b6e56368
+      flags: 0
+    RecentlyUsedSceneGuid-5:
+      value: 5a050c5201065b5f090d0a20157b5d444116402f7a2a76647f714d60e6e26369
+      flags: 0
+    RecentlyUsedSceneGuid-6:
+      value: 5402015e55005e5e585e542416215d44464f1d2f7b7d7560787b1861b3e1666f
+>>>>>>> Stashed changes
       flags: 0
     RecentlyUsedSceneGuid-7:
       value: 5454500456055f5e0b5a5873457506444e161e2e787127647f2a4f65e6b93268
@@ -33,6 +55,7 @@ EditorUserSettings:
       value: 5402015e55005e5e585e542416215d44464f1d2f7b7d7560787b1861b3e1666f
       flags: 0
     RecentlyUsedSceneGuid-9:
+<<<<<<< Updated upstream
       value: 5600075e06025f58550d0a2340725a441415487d2f7173627c7d4567b6e56368
       flags: 0
     UnityEditor.ShaderGraph.Blackboard:
@@ -46,6 +69,9 @@ EditorUserSettings:
       flags: 0
     UnityEditor.ShaderGraph.ToggleSettings:
       value: 18135d1527590858060c032302276919051e1a26296a7c243f3c187fa0e92708f0e220e0e22d09352a0bed30017c5b2be01f0c47b40219221f1ded0b12eb1f0127cc0bcc18c41a5e910d0edbc85193e0dadadbf8e8f9e8ced7dba5e0b6aaaca4dbfeabfef4eae1
+=======
+      value: 530004505d055b0e0e080d2142750b44474f4b7f2f2e7f62782a1e37b7b66761
+>>>>>>> Stashed changes
       flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650
