@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    public GameObject Canvas;
+    //public GameObject Canvas;
 
     public Text nameText;
     public Text dialogueText;

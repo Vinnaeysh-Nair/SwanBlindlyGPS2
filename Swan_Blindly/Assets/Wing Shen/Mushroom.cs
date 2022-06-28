@@ -9,14 +9,12 @@ public class Mushroom : MonoBehaviour
     public GameObject Dialogue;
     public GameObject NameBox;
     public GameObject TextBox;
-    //public GameObject Canvas;
     public int num;
     public Dialogue dialogue;
 
     void Start()
     {
         collider = GetComponent<Collider>();
-        //Dialogue.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -25,20 +23,42 @@ public class Mushroom : MonoBehaviour
         {
             if(num == 1)
             {
-                //Canvas.SetActive(false);
-                //Dialogue.SetActive(true);
+                Dialogue.SetActive(true);
                 FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
                 NameBox.GetComponent<Text>().text = "Tutorial 1";
-                TextBox.GetComponent<Text>().text = "Swipe and hold on the left side of the screen to move the character.";
+                TextBox.GetComponent<Text>().text = "Use the Joystick to move the character.";
             }
             
             if(num == 2)
             {
-                //Canvas.SetActive(false);
                 Dialogue.SetActive(true);
                 FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
                 NameBox.GetComponent<Text>().text = "Tutorial 2";
                 TextBox.GetComponent<Text>().text = "Swipe and hold on the right side of the screen to move the camera.";
+            }
+
+            if(num == 3)
+            {
+                Dialogue.SetActive(true);
+                FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+                NameBox.GetComponent<Text>().text = "Tutorial 3";
+                TextBox.GetComponent<Text>().text = "Press the jump button to jump.";
+            }
+
+            if(num == 4)
+            {
+                Dialogue.SetActive(true);
+                FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+                NameBox.GetComponent<Text>().text = "Tutorial 4";
+                TextBox.GetComponent<Text>().text = "Go close to items to pick them up.";
+            }
+
+            if(num == 5)
+            {
+                Dialogue.SetActive(true);
+                FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+                NameBox.GetComponent<Text>().text = "Tutorial 5";
+                TextBox.GetComponent<Text>().text = "";
             }
         }
     }
@@ -48,7 +68,6 @@ public class Mushroom : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             Dialogue.SetActive(false);
-            //Canvas.SetActive(true);
         }
     }
 }
