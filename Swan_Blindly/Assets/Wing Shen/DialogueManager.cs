@@ -21,7 +21,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-        Canvas.SetActive(false);
+        //Canvas.SetActive(false);
 
         animator.SetBool("IsOpen", true);
 
@@ -63,6 +63,6 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
-        Canvas.SetActive(true);
+        //Canvas.SetActive(true);
     }
 }

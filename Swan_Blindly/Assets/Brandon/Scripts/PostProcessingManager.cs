@@ -30,7 +30,7 @@ public class PostProcessingManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(ID);
+       // Debug.Log(ID);
     }
 
     void FixedUpdate()
