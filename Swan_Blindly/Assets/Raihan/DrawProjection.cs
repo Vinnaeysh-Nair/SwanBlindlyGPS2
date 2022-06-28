@@ -17,13 +17,18 @@ public class DrawProjection : MonoBehaviour
     public LayerMask CollidableLayers;
 
 
-    void Start()
+    public void Start()
     {
         throwingController = GetComponent<Throwing>();
         lineRenderer = GetComponent<LineRenderer>();
     }
 
-    void Update()
+    public void Update()
+    {
+       // RenderLine();
+    }
+
+    public void RenderLine()
     {
 
         lineRenderer.positionCount = numPoints;
@@ -36,7 +41,7 @@ public class DrawProjection : MonoBehaviour
             newPoint.y = startingPosition.y + startingVelocity.y * t + Physics.gravity.y / 2f * t * t;
             points.Add(newPoint);
 
-            if(Physics.OverlapSphere(newPoint, 0.2f, CollidableLayers).Length > 0)
+            if (Physics.OverlapSphere(newPoint, 0.2f, CollidableLayers).Length > 0)
             {
                 lineRenderer.positionCount = points.Count;
                 break;
