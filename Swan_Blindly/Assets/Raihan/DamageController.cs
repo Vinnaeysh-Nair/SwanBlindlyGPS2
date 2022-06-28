@@ -8,7 +8,6 @@ public class DamageController : MonoBehaviour
 
     [SerializeField] private HealthController _healthController = null;
 
-    [SerializeField] private PostProcessingManager _postProcessingManager = null;
 
     [SerializeField] private AudioClip bombAudio = null;
     private bool playingAudio;

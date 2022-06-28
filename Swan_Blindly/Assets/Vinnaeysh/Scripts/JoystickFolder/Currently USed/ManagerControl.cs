@@ -24,7 +24,7 @@ public class ManagerControl : MonoBehaviour
 
     void Start()
     {
-        jumpSpeed = 10f;
+        jumpSpeed = 0.63f;
         moveSpeed = 0.1f;
         gravity = 0.5f;
         Player = GameObject.FindGameObjectWithTag("Player");
@@ -38,7 +38,6 @@ public class ManagerControl : MonoBehaviour
     {
         inputX = JoyStickManager.inputHorizontal();
         inputZ = JoyStickManager.inputVertical();
-
 
     }
 
@@ -88,11 +87,12 @@ public class ManagerControl : MonoBehaviour
     public void PlayerJump()
     {
         if (cController.isGrounded )
-        {
-             
+        {            
             v_movement.y = jumpSpeed;
             Debug.Log("Jumping");
         }
-        
+
+        v_movement.y -= gravity;
+        cController.Move(v_movement * moveSpeed * Time.deltaTime);
     }
 }
