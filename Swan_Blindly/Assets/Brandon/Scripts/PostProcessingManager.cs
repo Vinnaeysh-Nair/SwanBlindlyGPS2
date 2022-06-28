@@ -35,6 +35,7 @@ public class PostProcessingManager : MonoBehaviour
 
     void FixedUpdate()
     {
+        //Default FX
         if (volume.profile != profiles[ID])
         {
             volume.profile = profiles[ID];
@@ -46,6 +47,7 @@ public class PostProcessingManager : MonoBehaviour
 
         }
 
+        //Damage FX
         if (DamageController.collided == true)
         {
             volume.profile = profiles[0];
@@ -58,16 +60,14 @@ public class PostProcessingManager : MonoBehaviour
         }
 
         //Container Lighting 
-        //if (ContainerCollided == true)
-        //{
-
-        //}
-
-        //Tutorial container Lighting
-        //if(ID == 2)
-        //bloom.intensity.value = Mathf.PingPong(Time.time * 2, 5);
-        //vignette.intensity.value = Mathf.PingPong(Time.time * 2, 0.7f);
-        //chrome.intensity.value = Mathf.PingPong(Time.time * 2, 1);
+        if (ContainerLightingTrigger.containterTrigger == true)
+        {
+            volume.profile = profiles[3];
+        }
+        else if (DamageController.collided == false)
+        {
+            volume.profile = profiles[1];
+        }
     }
 
     IEnumerator changingVolumeProfile()
