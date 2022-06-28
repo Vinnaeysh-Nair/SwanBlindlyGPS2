@@ -25,34 +25,30 @@ public class Throwing : MonoBehaviour
 
     private LineRenderer line;
 
-    public void Start()
+    private void Start()
     {
         readyToThrow = true;
         line = GetComponent<LineRenderer>();
     }
 
-    public void Update()
+    private void Update()
     {
-        //Aiming();
-    }
-
-    public void Aiming()
-    {
-        if (readyToThrow && totalThrows > 0 && !aimCamera.activeInHierarchy)
+        if(Input.GetKeyDown(throwkey) && readyToThrow && totalThrows > 0 && !aimCamera.activeInHierarchy)
         {
             line.enabled = true;
             mainCamera.SetActive(false);
             aimCamera.SetActive(true);
         }
-        if (readyToThrow && totalThrows > 0 && !mainCamera.activeInHierarchy)
+        if(Input.GetKeyUp(throwkey) && readyToThrow && totalThrows > 0 && !mainCamera.activeInHierarchy)
         {
             Throw();
             mainCamera.SetActive(true);
             aimCamera.SetActive(false);
         }
+
     }
 
-    public void Throw()
+    private void Throw()
     {
         readyToThrow = false;
         line.enabled = false;
@@ -85,7 +81,7 @@ public class Throwing : MonoBehaviour
         Invoke(nameof(ResetThrow), throwCooldown);
     }
 
-    public void ResetThrow()
+    private void ResetThrow()
     {
         readyToThrow = true;
     }
