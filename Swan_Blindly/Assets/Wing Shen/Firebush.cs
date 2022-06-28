@@ -5,7 +5,6 @@ using UnityEngine;
 public class Firebush : MonoBehaviour
 {
     Collider collider;
-    //Collision collision;
     public GameObject firebush;
     public GameObject FirebushFire;
 
@@ -19,7 +18,6 @@ public class Firebush : MonoBehaviour
     {
         if (collision.collider.name == "MC with matchstick")
         {
-            Debug.Log("Yes");
             FirebushFire.SetActive(true);
             StartCoroutine(burntFirebush());
         }
