@@ -25,7 +25,6 @@ public class JoyStickManager : MonoBehaviour, IDragHandler , IPointerDownHandler
         {
             posInput.x = posInput.x / (imgJoystickBg.rectTransform.sizeDelta.x);
             posInput.y = posInput.y / (imgJoystickBg.rectTransform.sizeDelta.y);
-            Debug.Log(posInput.x.ToString() + "/" + posInput.y.ToString());
 
             //normalising values
             if (posInput.magnitude > 1.0f)

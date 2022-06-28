@@ -6,11 +6,11 @@ public class PlayerJump : MonoBehaviour
 {
     [SerializeField] private float jumpSpeed;
     [SerializeField] private bool isGrounded;
-    private Rigidbody rb;
+    private CharacterController cr;
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        cr = GetComponent<CharacterController>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -33,7 +33,7 @@ public class PlayerJump : MonoBehaviour
     {
         if (isGrounded)
         {
-            rb.AddForce(0, jumpSpeed, 0, ForceMode.Impulse);
+            //cr.AddForce(0, jumpSpeed, 0, ForceMode.Impulse);
         }
 
     }

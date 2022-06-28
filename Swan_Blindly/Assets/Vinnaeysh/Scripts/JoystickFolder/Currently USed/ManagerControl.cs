@@ -9,17 +9,22 @@ public class ManagerControl : MonoBehaviour
     private Transform meshPlayer;
     private JoyStickManager JoyStickManager;
     private GameObject Player;
-     
+
 
     //move
+    [Header("PlayerControls")]
+    [SerializeField] private float moveSpeed;
+    [SerializeField] private float jumpSpeed;
+
     private float inputX;
     private float inputZ;
     private Vector3 v_movement;
-    [SerializeField] private float moveSpeed;
+    //private Vector3 JumpDirection = Vector3.zero;    
     private float gravity;
 
     void Start()
     {
+        jumpSpeed = 10f;
         moveSpeed = 0.1f;
         gravity = 0.5f;
         Player = GameObject.FindGameObjectWithTag("Player");
@@ -40,24 +45,53 @@ public class ManagerControl : MonoBehaviour
     private void FixedUpdate()
     {
         //gravity
+        Gravity();
+
+        // movement
+        Movement();
+
+        //mesh rotate
+        Rotate();
+
+    }
+
+    public void Gravity()
+    {
         if (cController.isGrounded)
         {
             v_movement.y = 0f;
         }
-        else 
+        else
         {
             v_movement.y -= gravity * Time.deltaTime;
+           
         }
+    }
 
-        // movement
-        v_movement = new Vector3(inputZ* moveSpeed, v_movement.y, -inputX * moveSpeed);
+
+    public void Movement()
+    {
+        v_movement = new Vector3(inputZ * moveSpeed, v_movement.y, -inputX * moveSpeed);
         cController.Move(v_movement);
+    }
 
-        //mesh rotate
+    public void Rotate()
+    {
         if (inputX != 0 || inputZ != 0)
         {
             Vector3 lookDir = new Vector3(-v_movement.x, 0, -v_movement.z);
             meshPlayer.rotation = Quaternion.LookRotation(lookDir);
         }
+    }
+
+
+    public void PlayerJump()
+    {
+        if (cController.isGrounded )
+        {
+            v_movement.y = jumpSpeed;
+            Debug.Log("Jumping");
+        }
+        
     }
 }

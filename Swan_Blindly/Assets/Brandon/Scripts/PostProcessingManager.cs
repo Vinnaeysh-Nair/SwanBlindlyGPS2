@@ -58,10 +58,10 @@ public class PostProcessingManager : MonoBehaviour
         }
 
         //Container Lighting 
-        if (ContainerCollided == true)
-        {
+        //if (ContainerCollided == true)
+        //{
 
-        }
+        //}
 
         //Tutorial container Lighting
         //if(ID == 2)
