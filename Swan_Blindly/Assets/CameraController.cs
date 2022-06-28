@@ -1,9 +1,9 @@
 using UnityEngine;
-using Cinemachine;
+//using Cinemachine;
 public class CameraController : MonoBehaviour
 {
     //Cam components
-    private CinemachineFreeLook Cinemachinefreelook;
+    //private CinemachineFreeLook Cinemachinefreelook;
     private CameraManager camManager;
     private GameObject ThirdPersonCam;
 
