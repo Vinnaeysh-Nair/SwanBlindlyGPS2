@@ -80,6 +80,8 @@ public class ManagerControl : MonoBehaviour
         {
             Vector3 lookDir = new Vector3(-v_movement.x, 0, -v_movement.z);
             meshPlayer.rotation = Quaternion.LookRotation(lookDir);
+            cController.transform.Rotate(Vector3.up * inputX * (100f * Time.deltaTime));
+
         }
     }
 
