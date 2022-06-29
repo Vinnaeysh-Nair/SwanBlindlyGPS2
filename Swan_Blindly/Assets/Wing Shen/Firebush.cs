@@ -17,9 +17,9 @@ public class Firebush : MonoBehaviour
         FirebushFire.SetActive(false);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.name == "MainCharacterWithMatchstick")
+        if (collision.collider.name == "MainCharacter")
         {
             FirebushFire.SetActive(true);
             StartCoroutine(burntFirebush());
