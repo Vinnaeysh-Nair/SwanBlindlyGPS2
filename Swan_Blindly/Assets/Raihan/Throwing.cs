@@ -79,6 +79,7 @@ public class Throwing : MonoBehaviour
 
         //ImplementCooldown
         Invoke(nameof(ResetThrow), throwCooldown);
+
     }
 
     private void ResetThrow()
