@@ -25,7 +25,7 @@ public class DamageController : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             collided = true;
-            Debug.Log(collided);
+            //Debug.Log(collided);
             bombAudioSource.PlayOneShot(bombAudio);
             _healthController.currentPlayerHealth -= bombDamage;
             _healthController.TakeDamage();
