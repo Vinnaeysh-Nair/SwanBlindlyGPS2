@@ -22,9 +22,13 @@ public class Inventory : MonoBehaviour
     public OnItemChanged onItemChangedCallback;
 
     public int inventorySpaceLimit = 5;
+    [HideInInspector]
     public int currentInventoryIndex = 0;
+
+    private int index = 0;
     
     public List<Item> items = new List<Item>();
+    //public Queue<Item> itemsTemp = new Queue<Item>();
 
     public bool addItem(Item itemTemp)
     {
@@ -34,7 +38,6 @@ public class Inventory : MonoBehaviour
             return false;
         }
         
-        currentInventoryIndex++;
         items.Add(itemTemp);
 
         invokeItemChanged();
@@ -45,6 +48,8 @@ public class Inventory : MonoBehaviour
     public void removeItem(Item itemTemp)
     {
         items.Remove(itemTemp);
+        
+        currentInventoryIndex--;
 
         invokeItemChanged();
     }
@@ -55,16 +60,20 @@ public class Inventory : MonoBehaviour
             onItemChangedCallback.Invoke();
     }
 
-    
-    
-    
-    
+    //new step 1
+    public int swapItemsRight()
+    {
+        index = currentInventoryIndex;
 
+        return index;
+    }
+
+    //---------------------------------- reference -------------------------------------
     //void Update()
     //{
-        
-        
-        
+
+
+
     //    int prevSelectedWeapon = selectedWeapon;
 
 

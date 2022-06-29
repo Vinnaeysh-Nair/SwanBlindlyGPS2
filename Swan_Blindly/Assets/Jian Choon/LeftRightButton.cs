@@ -1,32 +1,71 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+//using System.Collections;
+//using System.Collections.Generic;
+//using UnityEngine;
 
-public class LeftRightButton : MonoBehaviour
-{
-    private Queue<Item> itemsTemp = new Queue<Item>();
-    
-    
-
-    public void OnRightButtonClick()
-    {
-        Debug.Log(Inventory.instance.currentInventoryIndex);
-        for (int i = 0; i < Inventory.instance.currentInventoryIndex; i++)
-        {
-            itemsTemp.Enqueue(Inventory.instance.items[i]);
-        }
-        //use stack
-        itemsTemp.Dequeue();
-    }
-}
-
-//for (int j = 0; j < Inventory.instance.inventorySpaceLimit; j++)
+//public class LeftRightButton : MonoBehaviour
 //{
-//    if (Inventory.instance.items[j] == itemTemp)
+//    [SerializeField] private bool isLeftButton = true;
+//    [SerializeField] private Transform InventoryParents;
+
+//    Inventory tempInventory;
+//    InventorySlot[] slots1;
+
+//    private int itemCount = 0;
+
+//    private void Start()
 //    {
-//        Inventory.instance.items[j] = itemTemp;
-//        Inventory.instance.currentInventoryIndex--;
+//        tempInventory = Inventory.instance;
+//        tempInventory.onItemChangedCallback += UpdateUI1;
+
+//        slots1 = InventoryParents.GetComponentsInChildren<InventorySlot>();
 //    }
-//    Inventory.instance.invokeItemChanged();
+
+//    void UpdateUI1()
+//    {
+
+
+//        for (int i = 0; i < slots1.Length; i++)
+//        {
+//            if (i < tempInventory.items.Count)
+//            {
+//                slots1[i].AddItem(tempInventory.items[i]);
+//                itemCount++;
+//            }
+//            else
+//            {
+//                slots1[i].ClearSlot();
+//            }
+//        }
+//    }
+
+//    public void OnButtonClick()
+//    {
+//        tempInventory.invokeItemChanged();
+
+//        if (isLeftButton)
+//            OnLeftButtonClick();
+//        else
+//            OnRightButtonClick();
+
+//        //check if there is something in items
+//        Debug.Log(Inventory.instance.currentInventoryIndex);
+//        //for(int i = 0; i< Inventory.instance.currentInventoryIndex; i++)
+//        //{
+//        //    if (i == (Inventory.instance.currentInventoryIndex - 1))
+//        //        Inventory.instance.items[i - 1] = Inventory.instance.items[i];
+//        //}
+//        //Debug.Log(Inventory.instance.items);
+//        //Inventory.instance.invokeItemChanged();
+//    }
+
+        
+//     void OnLeftButtonClick()
+//    {
+
+//    }
+        
+//     void OnRightButtonClick()
+//    {
+
+//    }
 //}
