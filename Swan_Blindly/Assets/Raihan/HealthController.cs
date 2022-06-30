@@ -9,7 +9,7 @@ using UnityEngine.Rendering.Universal;
 public class HealthController : MonoBehaviour
 {
     [Header("Player Health Amount")]
-    public static float VignetteIntensity;
+    public static float Intensity;
     public float currentPlayerHealth = 100.0f;
     [SerializeField] public float maxPlayerHealth = 100.0f;
     [SerializeField] private int regenRate = 1;
@@ -41,6 +41,7 @@ public class HealthController : MonoBehaviour
     {
         Color splatterAlpha = redSplatterImage.color;
         splatterAlpha.a = 1 - (currentPlayerHealth / maxPlayerHealth);
+        Intensity = 1 - (currentPlayerHealth / maxPlayerHealth);
         redSplatterImage.color = splatterAlpha;
     }
 

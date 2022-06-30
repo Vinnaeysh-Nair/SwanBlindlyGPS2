@@ -8,7 +8,6 @@ public class DamageController : MonoBehaviour
 
     [SerializeField] private HealthController _healthController = null;
 
-
     [SerializeField] private AudioClip bombAudio = null;
     private bool playingAudio;
     private AudioSource bombAudioSource;
@@ -25,7 +24,6 @@ public class DamageController : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             collided = true;
-            //Debug.Log(collided);
             bombAudioSource.PlayOneShot(bombAudio);
             _healthController.currentPlayerHealth -= bombDamage;
             _healthController.TakeDamage();
