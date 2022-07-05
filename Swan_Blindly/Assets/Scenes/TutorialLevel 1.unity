@@ -1124,6 +1124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
+  jumpSpeed: 0
 --- !u!1 &897943210
 GameObject:
   m_ObjectHideFlags: 0
@@ -1813,7 +1814,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bombDamage: 10
   _healthController: {fileID: 2093128715}
-  _postProcessingManager: {fileID: 2121560756}
   bombAudio: {fileID: 8300000, guid: 5e52fbeea5f93534c88ac3ee1dcedcbe, type: 3}
 --- !u!65 &1604058722
 BoxCollider:
@@ -2142,7 +2142,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bombDamage: 10
   _healthController: {fileID: 2093128715}
-  _postProcessingManager: {fileID: 2121560756}
   bombAudio: {fileID: 8300000, guid: 5e52fbeea5f93534c88ac3ee1dcedcbe, type: 3}
 --- !u!65 &1828888006
 BoxCollider:
@@ -2707,17 +2706,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6904166183047433886, guid: 719f0333bd43c464bac4976256afa466, type: 3}
   m_PrefabInstance: {fileID: 2121560750}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2121560756 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2121560753, guid: 719f0333bd43c464bac4976256afa466, type: 3}
-  m_PrefabInstance: {fileID: 2121560750}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a8cb225dd58ae74fa7af5585ff731bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2137708714
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2875,9 +2863,13 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1682410187, guid: 1ef181ebeb144f84db90dd913d834c30, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1873809314, guid: 1ef181ebeb144f84db90dd913d834c30, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3342553813550438441, guid: 1ef181ebeb144f84db90dd913d834c30, type: 3}
       propertyPath: m_RootOrder
