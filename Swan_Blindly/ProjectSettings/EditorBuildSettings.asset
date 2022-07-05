@@ -10,9 +10,12 @@ EditorBuildSettings:
     guid: 9484d32ddcfbe8b47a8e6b042803db71
   - enabled: 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     path: Assets/Raihan/LoseScreen.unity
     guid: a1cbf6b6777b0c2439aed7e570beb9bb
   - enabled: 1
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     path: Assets/Scenes/TutorialBackUp.unity

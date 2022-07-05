@@ -39,7 +39,11 @@ RenderSettings:
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_IndirectSpecularColor: {r: 0.24851024, g: 0.38637272, b: 0.46269703, a: 1}
+=======
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+>>>>>>> Stashed changes
 =======
   m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
 >>>>>>> Stashed changes
