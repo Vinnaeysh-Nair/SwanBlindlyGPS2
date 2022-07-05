@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class Firebush : MonoBehaviour
 {
+    //[SerializeField] private string PlayerTag = "Player";
     Collider collider;
     public GameObject firebush;
     public GameObject FirebushFire;
+    //private CharacterController Controller;
 
     void Start()
     {
+        //Controller = GameObject.FindGameObjectWithTag(PlayerTag).GetComponent<CharacterController>();
         collider = GetComponent<Collider>();
         FirebushFire.SetActive(false);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.name == "MC with matchstick")
+        if (collision.collider.name == "MainCharacter")
         {
             FirebushFire.SetActive(true);
             StartCoroutine(burntFirebush());

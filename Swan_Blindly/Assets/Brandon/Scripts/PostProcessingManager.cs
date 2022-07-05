@@ -52,11 +52,15 @@ public class PostProcessingManager : MonoBehaviour
         {
             volume.profile = profiles[0];
             vignette.color.value = Color.red;
-            vignette.intensity.value = Mathf.PingPong(Time.time * 0.2f, 0.3f);
+            vignette.intensity.value = HealthController.Intensity;
+            chrome.intensity.value = HealthController.Intensity;
+            //vignette.intensity.value = Mathf.PingPong(Time.time * 0.2f, 0.3f);
         }
-        else if (DamageController.collided == false)
+        else if(HealthController.Intensity == 0)
         {
             volume.profile = profiles[1];
+            vignette.color.value = Color.black;
+            vignette.intensity.value = 0.496f;
         }
 
         //Container Lighting 

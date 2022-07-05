@@ -15,9 +15,17 @@ public class ItemPickUp : Interactable
 
     void PickUp()
     {
-        Debug.Log("Picking up " + item.name);
         bool isPickedUp = Inventory.instance.addItem(item);
-        if(isPickedUp)
+        if (isPickedUp)
+        {
+            Inventory.instance.currentInventoryIndex++;
+
+            //Inventory.instance.itemsTemp.Enqueue(item);
+            //Debug.Log("Enqueued: " + item.name);
+
+            Inventory.instance.invokeItemChanged();
+            
             Destroy(gameObject);
+        }
     }
 }
