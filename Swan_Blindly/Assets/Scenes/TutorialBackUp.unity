@@ -8633,7 +8633,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1583398887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9941,13 +9941,14 @@ GameObject:
   - component: {fileID: 1828888005}
   - component: {fileID: 1828888006}
   - component: {fileID: 1828888007}
+  - component: {fileID: 1828888008}
   m_Layer: 0
   m_Name: Water (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &1828888002
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10129,6 +10130,14 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!33 &1828888008
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828888000}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1830741846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12814,7 +12823,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 262437180510413971, guid: 0d92734c010914c499c924e860c63617, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.1190689
+      value: 0.11906889
       objectReference: {fileID: 0}
     - target: {fileID: 262437180510413971, guid: 0d92734c010914c499c924e860c63617, type: 3}
       propertyPath: m_LocalRotation.y
