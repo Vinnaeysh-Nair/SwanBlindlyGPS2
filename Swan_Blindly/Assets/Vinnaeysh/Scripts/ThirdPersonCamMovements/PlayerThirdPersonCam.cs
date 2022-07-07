@@ -11,11 +11,14 @@ public class PlayerThirdPersonCam : MonoBehaviour
     public Transform PlayerBody;
     public Rigidbody Rb;
 
+    private Joystick_Controls JoystickControls;
+
 
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        JoystickControls = GameObject.Find("JoystickBg").GetComponent<Joystick_Controls>();
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -32,9 +35,9 @@ public class PlayerThirdPersonCam : MonoBehaviour
         orientation.forward = viewDir.normalized;
 
         //rotate player object
-        float inputHorizontal = Input.GetAxis("Horizontal");
-        float inputVertical = Input.GetAxis("Vertical");
-        Vector3 inputDir = -1f * orientation.forward * inputVertical  + -1f * orientation.right * inputHorizontal;
+        float InputHorizontal = JoystickControls.inputHorizontal();
+        float InputVertical = JoystickControls.inputVertical();
+        Vector3 inputDir = -1f * orientation.forward * InputVertical  + -1f * orientation.right * InputHorizontal;
 
         if (inputDir != Vector3.zero)
         {

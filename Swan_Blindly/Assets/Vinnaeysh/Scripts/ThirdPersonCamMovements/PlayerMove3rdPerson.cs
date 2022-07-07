@@ -26,6 +26,7 @@ public class PlayerMove3rdPerson : MonoBehaviour
     public KeyCode jumpkey = KeyCode.Space;
 
 
+    private Joystick_Controls joystickControls;
     float InputHorizontal;
     float InputVertical;
     Vector3 moveDir;
@@ -34,6 +35,7 @@ public class PlayerMove3rdPerson : MonoBehaviour
 
     void Start()
     {
+        joystickControls = GameObject.Find("JoystickBg").GetComponent<Joystick_Controls>();
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
     }
@@ -64,8 +66,10 @@ public class PlayerMove3rdPerson : MonoBehaviour
     private void KeyInput()
     {
         //Move left right , forward and backward
-         InputHorizontal = Input.GetAxisRaw("Horizontal");
-         InputVertical = Input.GetAxisRaw("Vertical");
+        //InputHorizontal = Input.GetAxisRaw("Horizontal");
+        //InputVertical = Input.GetAxisRaw("Vertical");
+        InputHorizontal = joystickControls.inputHorizontal();
+        InputVertical = joystickControls.inputVertical();
 
         //Jump Button
         if (Input.GetKey(jumpkey) && isJump && isgrounded)
