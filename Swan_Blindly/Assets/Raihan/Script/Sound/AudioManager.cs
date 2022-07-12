@@ -46,7 +46,7 @@ public class AudioManager : MonoBehaviour
 
         //Loop music
         musicSource.loop = true;
-        musicSource.loop = true;
+        musicSource2.loop = true;
     }
 
     public void PlayMusic(AudioClip musicClip)
