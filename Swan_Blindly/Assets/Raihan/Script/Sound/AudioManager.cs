@@ -125,5 +125,15 @@ public class AudioManager : MonoBehaviour
     {
         sfxSource.PlayOneShot(clip, volume);
     }
+
+    public void SetMusicVolume(float volume) //If we want change volume is option menu in future
+    {
+        musicSource.volume = volume;
+        musicSource2.volume = volume;
+    }
+    public void SetSFXVolume(float volume) //If we want change volume is option menu in future
+    {
+        sfxSource.volume = volume;
+    }
 }
 
