@@ -64,7 +64,7 @@ public class AudioManager : MonoBehaviour
 
         StartCoroutine(UpdateMusicWithFade(activeSource, newClip, transitionTime));
     }
-    public void PlayMusicWithCrossFade(AudioClip musicClip, float transitionTIme = 1.0f)
+    public void PlayMusicWithCrossFade(AudioClip musicClip, float transitionTime = 1.0f)
     {
         AudioSource activeSource = (firstMusicSourceIsPlaying) ? musicSource : musicSource2;
         AudioSource newSource = (firstMusicSourceIsPlaying) ? musicSource2 : musicSource;
@@ -75,7 +75,7 @@ public class AudioManager : MonoBehaviour
         //Set fields of audio source, start coroutine to crossfade
         newSource.clip = musicClip;
         newSource.Play();
-        StartCoroutine(UpdateMusicWithCrossFade(activeSource, newSource, transitionTIme));
+        StartCoroutine(UpdateMusicWithCrossFade(activeSource, newSource, transitionTime));
     }
     private IEnumerator UpdateMusicWithFade(AudioSource activeSource, AudioClip newClip, float transitionTime)
     {
