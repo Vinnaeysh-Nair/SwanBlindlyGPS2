@@ -65,9 +65,6 @@ public class PlayerMove3rdPerson : MonoBehaviour
 
     private void KeyInput()
     {
-        //Move left right , forward and backward
-        //InputHorizontal = Input.GetAxisRaw("Horizontal");
-        //InputVertical = Input.GetAxisRaw("Vertical");
         InputHorizontal = joystickControls.inputHorizontal();
         InputVertical = joystickControls.inputVertical();
 
