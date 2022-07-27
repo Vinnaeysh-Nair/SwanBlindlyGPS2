@@ -27,7 +27,7 @@ public class DamageController : MonoBehaviour
             bombAudioSource.PlayOneShot(bombAudio);
             _healthController.currentPlayerHealth -= bombDamage;
             _healthController.TakeDamage();
-            gameObject.GetComponent<BoxCollider>().enabled = false;
+            //gameObject.GetComponent<BoxCollider>().enabled = false;
             playingAudio = true;
         }
     }
@@ -46,7 +46,7 @@ public class DamageController : MonoBehaviour
         {
             if (!bombAudioSource.isPlaying)
             {
-                gameObject.SetActive(false);
+                //gameObject.SetActive(false);
             }
         }
     }
