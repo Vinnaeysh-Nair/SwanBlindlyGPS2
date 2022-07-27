@@ -5,7 +5,7 @@ public class CineTOuch : MonoBehaviour
 {
     [Header("Components")]
     [SerializeField] CinemachineFreeLook cineCam;
-    [SerializeField] CamTouchField touchField;
+    [SerializeField] FixedTouchField touchField;
 
     [Header("SensitivyController")]
     [SerializeField] float SensitivityX = 0.1f;
