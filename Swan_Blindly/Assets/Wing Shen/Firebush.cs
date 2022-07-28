@@ -19,7 +19,7 @@ public class Firebush : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.name == "MainCharacter")
+        if (collision.collider.name == "MC_01")
         {
             FirebushFire.SetActive(true);
             StartCoroutine(burntFirebush());
