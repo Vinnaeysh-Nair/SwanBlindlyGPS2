@@ -1555,7 +1555,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 230541951}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -2593,7 +2593,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 362225456}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -5996,7 +5996,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2036415999}
         m_TargetAssemblyTypeName: MainMenuController, Assembly-CSharp
-        m_MethodName: ExitButton
+        m_MethodName: exitButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10574,7 +10574,7 @@ MonoBehaviour:
   defaultBrightness: 1
   qualityDropdown: {fileID: 1520888607}
   fullScreenToggle: {fileID: 869218877}
-  newGameLevel: TutorialBackUp
+  newGameLevel: MainLevel
   noSavedGameDialog: {fileID: 813412416}
   resolutionDropdown: {fileID: 1496622707}
   confirmationPrompt: {fileID: 680950342}
