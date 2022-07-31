@@ -32,7 +32,7 @@ public class InventorySlot : MonoBehaviour
         Inventory.instance.removeItem(tempItem);
     }
 
-    //new step 3
+    //new step 3 - same name as AddItem(), but replicate for better clarity
     public void swapItem(Item newItem)
     {
         tempItem = newItem;

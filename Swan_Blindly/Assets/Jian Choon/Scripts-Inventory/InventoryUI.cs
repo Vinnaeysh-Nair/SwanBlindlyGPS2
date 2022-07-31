@@ -14,6 +14,7 @@ public class InventoryUI : MonoBehaviour
 
     private int itemCount = 0;
     private int index;
+    private int tempIndex;
 
     void Start()
     {
@@ -44,30 +45,51 @@ public class InventoryUI : MonoBehaviour
     //new step 2
     public void nextItemRight()
     {
-        //method 1 - still testing
+        index = tempInventory.swapItemsRight();
         if (isFirst)
         {
-            index = tempInventory.swapItemsRight();
+            index--;
+            tempIndex = index;
             isFirst = false;
         }
-        index--;
-        slots[index].swapItem(tempInventory.items[index]);
+        Debug.Log(index);
+        Debug.Log(tempIndex);
+        slots[tempIndex].swapItem(tempInventory.items[tempIndex]);
+        
+        tempIndex--;
+        if(tempIndex ==0)
+        {
+            tempIndex = index;
+        }
 
-        //method 2 - kidda works
-        //int index = tempInventory.currentInventoryIndex;
-        //index--;
-        //slots[index].swapItem(tempInventory.items[index]);
+        //logic to return back to the first
+        /*if(index == -1)
+        {
+
+        }*/
+    }
+
+    public void nextItemLeft()
+    {
+        if ( index != 0)
+        {
+            index = 0;
+        }
+        if(index > 0 && index<=tempInventory.inventorySpaceLimit)
+            index++;
+
+        slots[index].swapItem(tempInventory.items[index]);
     }
 
     private void Update()
     {
         if(Input.GetKeyDown("p"))
         {
-            Debug.Log(tempInventory.currentInventoryIndex);
+            
         }
         else if(Input.GetKeyDown("l"))
         {
-            Debug.Log("Empty for now");
+            
         }
     }
 
