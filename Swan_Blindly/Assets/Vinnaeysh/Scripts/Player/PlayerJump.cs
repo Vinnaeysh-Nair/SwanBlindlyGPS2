@@ -17,13 +17,13 @@ public class PlayerJump : MonoBehaviour
         isOnGround = true;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         Jumping();
         StartCoroutine(JumpCoolDown());
     }
 
-    void Jumping()
+    public void Jumping()
     { 
         if (Input.GetButtonDown("Jump") && isOnGround )
         {

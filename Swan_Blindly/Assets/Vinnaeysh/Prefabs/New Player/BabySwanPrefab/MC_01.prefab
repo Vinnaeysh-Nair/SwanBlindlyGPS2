@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1914398784632905208}
   - component: {fileID: 1914398784632905206}
   - component: {fileID: 1914398784632905209}
-  - component: {fileID: 1914398784632905207}
   - component: {fileID: 1914398784632905204}
   m_Layer: 0
   m_Name: MC_01
@@ -90,26 +89,8 @@ MonoBehaviour:
   WhatIsGround:
     serializedVersion: 2
     m_Bits: 256
---- !u!95 &1914398784632905207
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1914398784632905210}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 1e2a04121a827b1479852c9d74c6cb26, type: 3}
-  m_Controller: {fileID: 9100000, guid: 6af7e836a4d15fc4ab698e13062b5ca2, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  isMovingName: 
+  notMovingName: 
 --- !u!114 &1914398784632905204
 MonoBehaviour:
   m_ObjectHideFlags: 0
