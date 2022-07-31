@@ -37,7 +37,7 @@ public class PlayerThirdPersonCam : MonoBehaviour
         //rotate player object
         float InputHorizontal = JoystickControls.inputHorizontal();
         float InputVertical = JoystickControls.inputVertical();
-        Vector3 inputDir = -1f * orientation.forward * InputVertical  + -1f * orientation.right * InputHorizontal;
+        Vector3 inputDir =  orientation.forward * InputVertical  +  orientation.right * InputHorizontal;
 
         if (inputDir != Vector3.zero)
         {
