@@ -23,7 +23,7 @@ public class PlayerJump : MonoBehaviour
         StartCoroutine(JumpCoolDown());
     }
 
-    void Jumping()
+    public void Jumping()
     { 
         if (Input.GetButtonDown("Jump") && isOnGround )
         {
