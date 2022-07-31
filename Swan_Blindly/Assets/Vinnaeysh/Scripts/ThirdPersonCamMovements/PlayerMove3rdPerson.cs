@@ -17,6 +17,11 @@ public class PlayerMove3rdPerson : MonoBehaviour
     public LayerMask WhatIsGround;
     bool isgrounded;
 
+    [Header("Animation")]
+    public string Walking;
+    public string Idle;
+    public int WalkDetect =1;
+
     private Rigidbody rb;
     private Animator PlayerAnim;
     private Joystick_Controls joystickControls;
@@ -43,6 +48,7 @@ public class PlayerMove3rdPerson : MonoBehaviour
 
         KeyInput();
         SpeedControl();
+        PlayerAnimate();
         //Applying ground drag when player on the ground
         if (isgrounded)
         {
@@ -54,6 +60,7 @@ public class PlayerMove3rdPerson : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //SpeedControl();
         PlayerMove();
     }
 
@@ -89,7 +96,26 @@ public class PlayerMove3rdPerson : MonoBehaviour
         if (flatVel.magnitude > moveSpeed)
         {
             Vector3 limitVel = flatVel.normalized * moveSpeed;
-            rb.velocity = new Vector3(limitVel.x, rb.velocity.y , limitVel.z);
+            rb.velocity = new Vector3(limitVel.x, rb.velocity.y, limitVel.z);
+            //PlayerAnim.SetTrigger(isMovingName);
+            //PlayerAnim.SetBool(isMovingName, true);
+        //}
+        //else
+        //{
+            //PlayerAnim.SetTrigger(notMovingName);
+            //PlayerAnim.SetBool(isMovingName, false);
+        }
+    }
+
+    private void PlayerAnimate()
+    {
+        if (moveSpeed <= 0)
+        {
+            PlayerAnim?.SetTrigger(Idle);
+        }
+        else if (moveSpeed > WalkDetect)
+        {
+            PlayerAnim?.SetTrigger(Walking);
         }
     }
 }

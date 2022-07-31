@@ -17,7 +17,7 @@ public class PlayerJump : MonoBehaviour
         isOnGround = true;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         Jumping();
         StartCoroutine(JumpCoolDown());
