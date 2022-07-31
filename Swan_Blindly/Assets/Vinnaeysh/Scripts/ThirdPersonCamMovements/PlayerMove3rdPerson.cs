@@ -7,25 +7,23 @@ public class PlayerMove3rdPerson : MonoBehaviour
     [Header("Movement")]
     public float moveSpeed;
     public float groundDrag;
+    public bool isMoving = false;
     public Transform Orientation;
-    public Rigidbody rb;
+    public float airMultiplier;
+
 
     [Header("Ground")]
     public float PlayerHeight;
     public LayerMask WhatIsGround;
     bool isgrounded;
 
-    [Header("Jumping")]
-    public float jumpForce;
-    public float jumpCoolDown;
-    public float airMultiplier;
-    bool isJump;
+    [Header("Animation")]
+    public string Walking;
+    public string Idle;
+    public int WalkDetect =1;
 
-
-    [Header("Keys")]
-    public KeyCode jumpkey = KeyCode.Space;
-
-
+    private Rigidbody rb;
+    private Animator PlayerAnim;
     private Joystick_Controls joystickControls;
     float InputHorizontal;
     float InputVertical;
@@ -35,9 +33,11 @@ public class PlayerMove3rdPerson : MonoBehaviour
 
     void Start()
     {
+        PlayerAnim = transform.GetChild(0).GetComponent<Animator>();
         joystickControls = GameObject.Find("JoystickBg").GetComponent<Joystick_Controls>();
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+        isMoving = false;
     }
 
     // Update is called once per frame
@@ -48,7 +48,7 @@ public class PlayerMove3rdPerson : MonoBehaviour
 
         KeyInput();
         SpeedControl();
-
+        PlayerAnimate();
         //Applying ground drag when player on the ground
         if (isgrounded)
         {
@@ -60,6 +60,7 @@ public class PlayerMove3rdPerson : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //SpeedControl();
         PlayerMove();
     }
 
@@ -67,26 +68,18 @@ public class PlayerMove3rdPerson : MonoBehaviour
     {
         InputHorizontal = joystickControls.inputHorizontal();
         InputVertical = joystickControls.inputVertical();
-
-        //Jump Button
-        if (Input.GetKey(jumpkey) && isJump && isgrounded)
-        {
-            isJump = false;
-            Jump();
-
-            Invoke(nameof(ResetJump), jumpCoolDown);
-        }
     }
 
     private void PlayerMove()
     {
         //calculate move dir
-        moveDir =  Orientation.forward * InputVertical +   Orientation.right * InputHorizontal;
+        moveDir =  Orientation.forward  * InputVertical + Orientation.right * InputHorizontal;
 
         //On ground
         if (isgrounded)
         {
             rb.AddForce(moveDir.normalized * moveSpeed * 10f, ForceMode.Force);
+            isMoving = true;
         }
         //In Air
         else if (!isgrounded)
@@ -103,20 +96,27 @@ public class PlayerMove3rdPerson : MonoBehaviour
         if (flatVel.magnitude > moveSpeed)
         {
             Vector3 limitVel = flatVel.normalized * moveSpeed;
-            rb.velocity = new Vector3(limitVel.x, rb.velocity.y , limitVel.z);
+            rb.velocity = new Vector3(limitVel.x, rb.velocity.y, limitVel.z);
+            //PlayerAnim.SetTrigger(isMovingName);
+            //PlayerAnim.SetBool(isMovingName, true);
+        //}
+        //else
+        //{
+            //PlayerAnim.SetTrigger(notMovingName);
+            //PlayerAnim.SetBool(isMovingName, false);
         }
     }
 
-    private void Jump()
+    private void PlayerAnimate()
     {
-        //reset y velocity to maintain consistent height jumped
-        rb.velocity = new Vector3(rb.velocity.x,0f,rb.velocity.z);
-
-        rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
-    }
-
-    private void ResetJump()
-    {
-        isJump = true; 
+        if (moveSpeed <= 0)
+        {
+            PlayerAnim?.SetTrigger(Idle);
+        }
+        else if (moveSpeed > WalkDetect)
+        {
+            PlayerAnim?.SetTrigger(Walking);
+        }
     }
 }
+ 

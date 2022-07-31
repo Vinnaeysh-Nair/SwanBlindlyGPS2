@@ -4,38 +4,46 @@ using UnityEngine;
 
 public class PlayerJump : MonoBehaviour
 {
-    [SerializeField] private float jumpSpeed;
-    [SerializeField] private bool isGrounded;
-    private CharacterController cr;
+    [Header("Jumping")]
+    public Rigidbody rb;
+    public bool isOnGround;
+    public float JumpForce = 5;
+    public float JumpCoolDownVal = 1f;
+
     // Start is called before the first frame update
     void Start()
     {
-        cr = GetComponent<CharacterController>();
+        rb = GetComponent<Rigidbody>();
+        isOnGround = true;
     }
 
-    private void OnTriggerEnter(Collider other)
+    void FixedUpdate()
     {
-        if (other.CompareTag("Ground"))
-        {
-            isGrounded = true;
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Ground"))
-        {
-            isGrounded = false;
-        }
+        Jumping();
+        StartCoroutine(JumpCoolDown());
     }
 
     public void Jumping()
-    {
-        if (isGrounded)
+    { 
+        if (Input.GetButtonDown("Jump") && isOnGround )
         {
-            //cr.AddForce(0, jumpSpeed, 0, ForceMode.Impulse);
+            rb.AddForce(new Vector3(0, JumpForce, 0), ForceMode.Impulse);
+            isOnGround = false;
         }
-
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name == "Ground")
+            isOnGround = true;
+    }
+
+    IEnumerator JumpCoolDown()
+    {
+        if (!isOnGround)
+        {
+            yield return new WaitForSeconds(JumpCoolDownVal);
+            isOnGround = true;
+        }
+    }
 }
