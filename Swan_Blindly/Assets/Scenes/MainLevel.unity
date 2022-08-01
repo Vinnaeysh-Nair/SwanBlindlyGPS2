@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.24841166, g: 0.38653484, b: 0.46291423, a: 1}
+  m_IndirectSpecularColor: {r: 0.24801949, g: 0.38624278, b: 0.46274018, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4014,6 +4014,7 @@ Transform:
   - {fileID: 1598612153}
   - {fileID: 1978534885}
   - {fileID: 28661239}
+  - {fileID: 494956023}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5208,6 +5209,80 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4626379068464761429, guid: f867e03378378b74f84c7bca4dc1d806, type: 3}
   m_PrefabInstance: {fileID: 493308433}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &494956022
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 414031530}
+    m_Modifications:
+    - target: {fileID: 7439647887128588048, guid: 67d7707a46b84a14c809deffa52f1e4e, type: 3}
+      propertyPath: m_Name
+      value: Thin Tree Tall (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815188988716168618, guid: 67d7707a46b84a14c809deffa52f1e4e, type: 3}
+      propertyPath: m_RootOrder
+      value: 182
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815188988716168618, guid: 67d7707a46b84a14c809deffa52f1e4e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5745
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815188988716168618, guid: 67d7707a46b84a14c809deffa52f1e4e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5745
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815188988716168618, guid: 67d7707a46b84a14c809deffa52f1e4e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5745
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815188988716168618, guid: 67d7707a46b84a14c809deffa52f1e4e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815188988716168618, guid: 67d7707a46b84a14c809deffa52f1e4e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.7759094
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815188988716168618, guid: 67d7707a46b84a14c809deffa52f1e4e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.470852
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815188988716168618, guid: 67d7707a46b84a14c809deffa52f1e4e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815188988716168618, guid: 67d7707a46b84a14c809deffa52f1e4e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815188988716168618, guid: 67d7707a46b84a14c809deffa52f1e4e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815188988716168618, guid: 67d7707a46b84a14c809deffa52f1e4e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815188988716168618, guid: 67d7707a46b84a14c809deffa52f1e4e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815188988716168618, guid: 67d7707a46b84a14c809deffa52f1e4e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815188988716168618, guid: 67d7707a46b84a14c809deffa52f1e4e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 67d7707a46b84a14c809deffa52f1e4e, type: 3}
+--- !u!4 &494956023 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7815188988716168618, guid: 67d7707a46b84a14c809deffa52f1e4e, type: 3}
+  m_PrefabInstance: {fileID: 494956022}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &495495813 stripped
 GameObject:
@@ -11273,7 +11348,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3333334, y: 1}
+    m_SensorSize: {x: 2.0255942, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -11878,7 +11953,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3333334, y: 1}
+    m_SensorSize: {x: 2.0255942, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -16613,7 +16688,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3333334, y: 1}
+    m_SensorSize: {x: 2.0255942, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -17279,7 +17354,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3333334, y: 1}
+    m_SensorSize: {x: 2.0255942, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -20506,6 +20581,7 @@ MonoBehaviour:
   dialogueText: {fileID: 828823530}
   canvas: {fileID: 495495813}
   rb: {fileID: 1703521934}
+  isDialogue: 0
   animator: {fileID: 1210692418}
 --- !u!4 &1856610698
 Transform:
