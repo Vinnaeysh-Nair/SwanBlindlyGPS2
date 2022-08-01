@@ -97,27 +97,11 @@ public class PlayerMove3rdPerson : MonoBehaviour
         {
             Vector3 limitVel = flatVel.normalized * moveSpeed;
             rb.velocity = new Vector3(limitVel.x, rb.velocity.y, limitVel.z);
-            //PlayerAnim.SetTrigger(isMovingName);
-            //PlayerAnim.SetBool(isMovingName, true);
-        //}
-        //else
-        //{
-            //PlayerAnim.SetTrigger(notMovingName);
-            //PlayerAnim.SetBool(isMovingName, false);
         }
     }
 
     private void PlayerAnimate()
     {
-        /*if (moveSpeed <= 0)
-        {
-            PlayerAnim?.SetTrigger(Idle);
-        }
-        else if (moveSpeed > WalkDetect)
-        {
-            PlayerAnim?.SetTrigger(Walking);
-        }*/
-
         if(InputHorizontal == 0.0f && InputVertical == 0.0f)
         {
             PlayerAnim?.SetBool("Move", false);

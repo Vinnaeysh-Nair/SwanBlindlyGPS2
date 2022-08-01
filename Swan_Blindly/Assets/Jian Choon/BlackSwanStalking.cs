@@ -13,22 +13,17 @@ public class BlackSwanStalking : MonoBehaviour
     [SerializeField] int minSpeed = 1;
     [SerializeField] int maxSpeed = 5;*/
     
-    [Range(1, 5)]
+    [Range(1, 10)]
     [SerializeField] float speed = 1;
-
-    private void Start()
-    {
-        
-    }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.G))
         {
             generateRandomSpeed();
             chaseTarget();
         }
-        if(Input.GetKeyUp(KeyCode.Space))
+        if(Input.GetKeyUp(KeyCode.G))
         {
             stopChasingTarget();
         }
