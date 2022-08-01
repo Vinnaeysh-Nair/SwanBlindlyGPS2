@@ -32,7 +32,7 @@ public class Aiming : MonoBehaviour
         line = GetComponent<LineRenderer>();
     }
 
-    /*void Update()
+    void Update()
     {
         if (Input.GetKeyDown(throwkey) && readyToThrow && totalThrows > 0 && !aimCamera.activeInHierarchy)
         {
@@ -47,7 +47,7 @@ public class Aiming : MonoBehaviour
             aimCamera.SetActive(false);
         }
 
-    }*/
+    }
 
     public void Aim()
     {
