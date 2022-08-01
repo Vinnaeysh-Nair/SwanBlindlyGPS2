@@ -692,6 +692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventorySpaceLimit: 5
+  currentInventoryIndex: 0
   items: []
 --- !u!114 &4071846145376771190
 MonoBehaviour:

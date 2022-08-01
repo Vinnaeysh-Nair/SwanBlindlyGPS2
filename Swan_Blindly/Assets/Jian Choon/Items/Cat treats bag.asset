@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Cat treats bag
   m_EditorClassIdentifier: 
   name: Cat treats bag
-  icon: {fileID: 21300000, guid: 1715935b6f5a27d4bb7381ea62dbd3c0, type: 3}
+  icon: {fileID: 21300000, guid: 436990d6310977e4c87e57b64c6c9254, type: 3}
