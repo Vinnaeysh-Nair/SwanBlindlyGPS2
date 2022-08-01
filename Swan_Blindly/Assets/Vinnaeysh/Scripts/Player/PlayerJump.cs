@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 
 public class PlayerJump : MonoBehaviour
 {
@@ -10,8 +8,6 @@ public class PlayerJump : MonoBehaviour
     private Rigidbody rb;
     [SerializeField] private float JumpForce = 5;
     private float distToGround = 0.0f;
-    [SerializeField] private Button jumpButton;
-    [SerializeField] private TextMeshProUGUI tempJumpButton;
 
     void Start()
     {

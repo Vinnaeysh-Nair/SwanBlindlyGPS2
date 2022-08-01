@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.24801949, g: 0.38624278, b: 0.46274018, a: 1}
+  m_IndirectSpecularColor: {r: 0.24841166, g: 0.38653484, b: 0.46291423, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2831,6 +2831,18 @@ PrefabInstance:
     - target: {fileID: 3559014176797359035, guid: 959a68d207bbe9248a414817d053b9e9, type: 3}
       propertyPath: m_Color.a
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8550282736821559716, guid: 959a68d207bbe9248a414817d053b9e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 708857655}
+    - target: {fileID: 8550282736821559716, guid: 959a68d207bbe9248a414817d053b9e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickJump
+      objectReference: {fileID: 0}
+    - target: {fileID: 8550282736821559716, guid: 959a68d207bbe9248a414817d053b9e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GettingJumpButton, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 9112735243559187066, guid: 959a68d207bbe9248a414817d053b9e9, type: 3}
       propertyPath: m_IsActive
@@ -7443,6 +7455,24 @@ Terrain:
   m_GroupingID: 0
   m_RenderingLayerMask: 1
   m_AllowAutoConnect: 1
+--- !u!1 &708857653 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7621498536325491463, guid: 959a68d207bbe9248a414817d053b9e9, type: 3}
+  m_PrefabInstance: {fileID: 295541783}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &708857655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708857653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0c0534924ab93a40b30c437003935a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerJump: {fileID: 1703521935}
 --- !u!1001 &709759691
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18355,6 +18385,17 @@ Rigidbody:
   m_CorrespondingSourceObject: {fileID: 1914398784632905208, guid: b00a4ca6a40d8e34b9f5777d1da3c226, type: 3}
   m_PrefabInstance: {fileID: 216216207}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1703521935 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1914398784632905204, guid: b00a4ca6a40d8e34b9f5777d1da3c226, type: 3}
+  m_PrefabInstance: {fileID: 216216207}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32fe26f79e5085a428a6ba371c330ab6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1707919235
 GameObject:
   m_ObjectHideFlags: 0
