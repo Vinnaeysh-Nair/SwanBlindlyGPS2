@@ -8,6 +8,8 @@ public class DialogueManager : MonoBehaviour
 {
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
+    public GameObject canvas;
+    public Rigidbody rb;
 
     public Animator animator;
 
@@ -21,6 +23,8 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue dialogue)
     {
         animator.SetBool("IsOpen", true);
+        canvas.SetActive(false);
+        rb.constraints = RigidbodyConstraints.FreezePosition;
 
         nameText.text = dialogue.name;
 
@@ -60,5 +64,8 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
+        canvas.SetActive(true);
+        rb.constraints = RigidbodyConstraints.None;
+        rb.constraints = RigidbodyConstraints.FreezeRotation;
     }
 }
