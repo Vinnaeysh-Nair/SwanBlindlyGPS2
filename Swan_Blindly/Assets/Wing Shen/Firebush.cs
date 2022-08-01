@@ -4,23 +4,29 @@ using UnityEngine;
 
 public class Firebush : MonoBehaviour
 {
-    //[SerializeField] private string PlayerTag = "Player";
     Collider collider;
     public GameObject firebush;
     public GameObject FirebushFire;
-    //private CharacterController Controller;
+    public GameObject playerCam;
+    public GameObject firebushCam;
+    public GameObject canvas;
+    public Rigidbody rb;
 
     void Start()
     {
-        //Controller = GameObject.FindGameObjectWithTag(PlayerTag).GetComponent<CharacterController>();
         collider = GetComponent<Collider>();
         FirebushFire.SetActive(false);
+        firebushCam.SetActive(false);
     }
 
     void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.name == "MC_01")
         {
+            canvas.SetActive(false);
+            rb.constraints = RigidbodyConstraints.FreezePosition;
+            playerCam.SetActive(false);
+            firebushCam.SetActive(true);
             FirebushFire.SetActive(true);
             StartCoroutine(burntFirebush());
         }
@@ -31,5 +37,10 @@ public class Firebush : MonoBehaviour
         yield return new WaitForSeconds(2);
         firebush.SetActive(false);
         FirebushFire.SetActive(false);
+        canvas.SetActive(true);
+        rb.constraints = RigidbodyConstraints.None;
+        rb.constraints = RigidbodyConstraints.FreezeRotation;
+        firebushCam.SetActive(false);
+        playerCam.SetActive(true);
     }
 }
