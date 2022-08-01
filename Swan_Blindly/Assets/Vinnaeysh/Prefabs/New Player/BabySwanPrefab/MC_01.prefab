@@ -83,7 +83,6 @@ GameObject:
   - component: {fileID: 1914398784632905208}
   - component: {fileID: 1914398784632905206}
   - component: {fileID: 1914398784632905209}
-  - component: {fileID: 1914398784632905204}
   m_Layer: 0
   m_Name: MC_01
   m_TagString: Player
@@ -164,22 +163,6 @@ MonoBehaviour:
   Walking: 
   Idle: 
   WalkDetect: 1
---- !u!114 &1914398784632905204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1914398784632905210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32fe26f79e5085a428a6ba371c330ab6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1914398784632905208}
-  isOnGround: 0
-  JumpForce: 5
-  JumpCoolDownVal: 1.5
 --- !u!1 &8102120461977693368
 GameObject:
   m_ObjectHideFlags: 0

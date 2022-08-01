@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
 
@@ -10,7 +11,8 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI dialogueText;
     public GameObject canvas;
     public Rigidbody rb;
-
+    public bool isDialogue;
+    
     public Animator animator;
 
     private Queue<string> sentences;    
@@ -18,12 +20,14 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         sentences = new Queue<string>();
+        isDialogue = false;
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
         animator.SetBool("IsOpen", true);
         canvas.SetActive(false);
+        isDialogue = true;
         rb.constraints = RigidbodyConstraints.FreezePosition;
 
         nameText.text = dialogue.name;
@@ -61,11 +65,12 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    void EndDialogue()
+    public void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
         canvas.SetActive(true);
+        isDialogue = false;
         rb.constraints = RigidbodyConstraints.None;
         rb.constraints = RigidbodyConstraints.FreezeRotation;
-    }
+    }    
 }

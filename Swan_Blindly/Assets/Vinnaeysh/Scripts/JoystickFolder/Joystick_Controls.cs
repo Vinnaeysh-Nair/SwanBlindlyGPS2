@@ -23,6 +23,7 @@ public class Joystick_Controls : MonoBehaviour, IDragHandler, IPointerDownHandle
         Joystick = transform.GetChild(0).GetComponent<Image>();
     }
 
+
     public void OnDrag(PointerEventData eventData)
     {
         if (RectTransformUtility.ScreenPointToLocalPointInRectangle(JoystickBg.rectTransform, eventData.position, eventData.pressEventCamera, out posInput))
@@ -68,5 +69,11 @@ public class Joystick_Controls : MonoBehaviour, IDragHandler, IPointerDownHandle
             return posInput.y;
         else
             return Input.GetAxis("Vertical");
+    }
+
+    public void ResetJoyPos()
+    {
+        posInput = Vector2.zero;
+        Joystick.rectTransform.anchoredPosition = Vector2.zero;
     }
 }

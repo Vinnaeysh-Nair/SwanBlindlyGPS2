@@ -6,16 +6,15 @@ using TMPro;
 
 public class Mushroom : MonoBehaviour
 {
-    Collider collider;
+    Collider collide;
     public GameObject Dialogue;
     public TextMeshProUGUI NameBox;
     public TextMeshProUGUI TextBox;
     public int num;
     public Dialogue dialogue;
-
     void Start()
     {
-        collider = GetComponent<Collider>();
+        collide = GetComponent<Collider>();
     }
 
     private void OnTriggerEnter(Collider other)
