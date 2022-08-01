@@ -10,4 +10,6 @@ public class GettingJumpButton : MonoBehaviour
     {
         playerJump.Jumping();
     }
+
+
 }
