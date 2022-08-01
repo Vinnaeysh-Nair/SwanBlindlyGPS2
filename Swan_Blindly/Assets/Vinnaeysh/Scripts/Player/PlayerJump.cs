@@ -23,7 +23,8 @@ public class PlayerJump : MonoBehaviour
         {
             Jumping();
         }
-        else
+        
+        if (!isGrounded())
         {
             playerAnim.SetBool("Jump", false);
         }
