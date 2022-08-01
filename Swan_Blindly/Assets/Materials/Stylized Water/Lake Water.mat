@@ -53,7 +53,7 @@ Material:
     - _RefractionSpeed: 0.03
     - _RefractionStrength: 6.74
     - _Smoothness: 1
-    - _WaveDisplacment: -2.3
+    - _WaveDisplacment: 0
     m_Colors:
     - _DeepColor: {r: 0.0032848439, g: 0.004678414, b: 0.0041807103, a: 0.7647059}
     - _FoamColor: {r: 0.7253471, g: 0.9433962, b: 0.7453517, a: 1}

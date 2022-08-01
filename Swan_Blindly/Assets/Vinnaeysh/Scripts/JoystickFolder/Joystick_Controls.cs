@@ -12,8 +12,10 @@ public class Joystick_Controls : MonoBehaviour, IDragHandler, IPointerDownHandle
     [SerializeField] private float StickLimitorY;
 
     private Image JoystickBg;
-    private Image Joystick;
-    private Vector2 posInput;
+    public Image Joystick;
+
+    [HideInInspector]
+    public Vector2 posInput;
     // Start is called before the first frame update
     void Start()
     {
