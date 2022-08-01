@@ -109,13 +109,22 @@ public class PlayerMove3rdPerson : MonoBehaviour
 
     private void PlayerAnimate()
     {
-        if (moveSpeed <= 0)
+        /*if (moveSpeed <= 0)
         {
             PlayerAnim?.SetTrigger(Idle);
         }
         else if (moveSpeed > WalkDetect)
         {
             PlayerAnim?.SetTrigger(Walking);
+        }*/
+
+        if(InputHorizontal == 0.0f && InputVertical == 0.0f)
+        {
+            PlayerAnim?.SetBool("Move", false);
+        }
+        else if(InputHorizontal > 0.0f || InputVertical > 0.0f || InputHorizontal < 0.0f || InputVertical < 0.0f)
+        {
+            PlayerAnim?.SetBool("Move", true);
         }
     }
 }
