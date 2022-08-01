@@ -1,49 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerJump : MonoBehaviour
 {
     [Header("Jumping")]
-    public Rigidbody rb;
-    public bool isOnGround;
-    public float JumpForce = 5;
-    public float JumpCoolDownVal = 1f;
+    private Rigidbody rb;
+    [SerializeField] private float JumpForce = 5;
+    private float distToGround = 0.0f;
+    [SerializeField] private Button jumpButton;
+    [SerializeField] private TextMeshProUGUI tempJumpButton;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        isOnGround = true;
     }
 
-    void FixedUpdate()
+    private void Update()
     {
-        Jumping();
-        StartCoroutine(JumpCoolDown());
+        if (Input.GetButtonDown("Jump") && isGrounded())
+        {
+            Jumping();
+        }
     }
-
+    
     public void Jumping()
-    { 
-        if (Input.GetButtonDown("Jump") && isOnGround )
+    {
+        if (isGrounded())
         {
             rb.AddForce(new Vector3(0, JumpForce, 0), ForceMode.Impulse);
-            isOnGround = false;
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    bool isGrounded()
     {
-        if (collision.gameObject.name == "Ground")
-            isOnGround = true;
-    }
-
-    IEnumerator JumpCoolDown()
-    {
-        if (!isOnGround)
-        {
-            yield return new WaitForSeconds(JumpCoolDownVal);
-            isOnGround = true;
-        }
+        return Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.5f);
     }
 }
