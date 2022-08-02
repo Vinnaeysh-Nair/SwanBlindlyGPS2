@@ -9,7 +9,6 @@ TagManager:
   - ThirdPersonCam
   - touchField
   - PickUpable
-  - Box
   layers:
   - Default
   - TransparentFX

@@ -15,7 +15,7 @@ public class Joint : MonoBehaviour
 
             if(Physics.Raycast(ray, out hit))
             {
-                if(hit.transform.tag == "Box")
+                if(hit.transform.name == "Cube")
                 {
                     GetComponent<FixedJoint>().connectedBody = null;
                 }
