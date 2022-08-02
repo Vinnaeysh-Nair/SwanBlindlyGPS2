@@ -12,6 +12,7 @@ public class Mushroom : MonoBehaviour
     public TextMeshProUGUI TextBox;
     public int num;
     public Dialogue dialogue;
+
     void Start()
     {
         collide = GetComponent<Collider>();
@@ -67,7 +68,7 @@ public class Mushroom : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            Dialogue.SetActive(false);
+            //Dialogue.SetActive(false);
         }
     }
 }
