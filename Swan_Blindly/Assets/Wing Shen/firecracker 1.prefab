@@ -127,6 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4084976723ecff74e8c23b7dfba19584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explodeSFX: {fileID: 8300000, guid: ad5bef253b8f6dc449ed163edda7a235, type: 3}
   exp: {fileID: 8923909720847958918, guid: e65369cc2a79aa7458931216cbc1dcaf, type: 3}
   expForce: 500
   radius: 8
