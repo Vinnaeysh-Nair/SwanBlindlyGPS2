@@ -46,12 +46,20 @@ public class Mushroom : MonoBehaviour
                 TextBox.text = "Press the jump button to jump.";
             }
 
+            if(num == 33)
+            {
+                Dialogue.SetActive(true);
+                FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+                NameBox.text = "Reminder";
+                TextBox.text = "Beware of the water as it can affect your health.";
+            }
+
             if(num == 4)
             {
                 Dialogue.SetActive(true);
                 FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
                 NameBox.text = "Tutorial 4";
-                TextBox.text = "Go close to items to pick them up.";
+                TextBox.text = "Collide with movable objects to push and pull and tap it to detach it at your preferred spot.";
             }
 
             if(num == 5)
@@ -59,7 +67,7 @@ public class Mushroom : MonoBehaviour
                 Dialogue.SetActive(true);
                 FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
                 NameBox.text = "Tutorial 5";
-                TextBox.text = "";
+                TextBox.text = "Pickable items will be displayed in the UI inventory when collected, in order to use the items tap it in the UI.";
             }
         }
     }

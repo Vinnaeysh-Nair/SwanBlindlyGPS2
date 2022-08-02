@@ -4645,6 +4645,7 @@ Transform:
   - {fileID: 1184594889}
   - {fileID: 1688971339}
   - {fileID: 323151199}
+  - {fileID: 1834861319}
   - {fileID: 1860328081}
   - {fileID: 382705335}
   m_Father: {fileID: 0}
@@ -10612,7 +10613,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 164253843}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 4.068, z: 0}
 --- !u!1001 &383178617
 PrefabInstance:
@@ -48972,6 +48973,72 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 771dd3b240bdec44da814c2ba28be75e, type: 3}
   m_PrefabInstance: {fileID: 1832299245}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1834861318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1834861319}
+  - component: {fileID: 1834861321}
+  - component: {fileID: 1834861320}
+  m_Layer: 0
+  m_Name: Reminder of water
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1834861319
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834861318}
+  m_LocalRotation: {x: -0, y: 0.12901928, z: -0, w: 0.9916421}
+  m_LocalPosition: {x: 13.93, y: 1.12, z: -5.54}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 164253843}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 14.826, z: 0}
+--- !u!114 &1834861320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834861318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bd9583707b715b4298e6168b29a90a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Dialogue: {fileID: 316409196}
+  NameBox: {fileID: 1138971591}
+  TextBox: {fileID: 828823530}
+  num: 33
+  dialogue:
+    name: 
+    sentences:
+    - 
+--- !u!65 &1834861321
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834861318}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9344839, y: 0.6158142, z: 4.7031355}
+  m_Center: {x: 0.76429206, y: -1.9447632, z: -0.16200253}
 --- !u!1001 &1840199461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49801,7 +49868,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 164253843}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: -94.576, z: 0}
 --- !u!1001 &1861045292
 PrefabInstance:
