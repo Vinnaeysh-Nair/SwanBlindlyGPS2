@@ -43,7 +43,37 @@ public class InventoryUI : MonoBehaviour
     }
 
     //new step 2
-    public void nextItemRight()
+    /*public void nextItemRight()
+    {
+        calculateIndex();
+        
+        slots[tempIndex].swapItemRight(tempInventory.items[tempIndex]);
+        tempIndex--;
+
+        if(tempIndex < 0)
+        {
+            tempIndex = tempInventory.currentInventoryIndex;
+        }
+    }*/
+
+    /*public void nextItemLeft()
+    {
+        
+        tempIndex = index;
+        
+        slots[index].swapItemLeft(tempInventory.items[index]);
+        //tempIndex++;
+
+        *//*if ( index != 0)
+        {
+            index = 0;
+        }
+        if(index > 0 && index<=tempInventory.inventorySpaceLimit)
+            index++;*//*
+
+    }*/
+
+    private void calculateIndex()
     {
         index = tempInventory.swapItemsRight();
         if (isFirst)
@@ -52,33 +82,6 @@ public class InventoryUI : MonoBehaviour
             tempIndex = index;
             isFirst = false;
         }
-        Debug.Log(index);
-        Debug.Log(tempIndex);
-        slots[tempIndex].swapItem(tempInventory.items[tempIndex]);
-        
-        tempIndex--;
-        if(tempIndex ==0)
-        {
-            tempIndex = index;
-        }
-
-        //logic to return back to the first
-        /*if(index == -1)
-        {
-
-        }*/
-    }
-
-    public void nextItemLeft()
-    {
-        if ( index != 0)
-        {
-            index = 0;
-        }
-        if(index > 0 && index<=tempInventory.inventorySpaceLimit)
-            index++;
-
-        slots[index].swapItem(tempInventory.items[index]);
     }
 
     private void Update()
@@ -92,17 +95,4 @@ public class InventoryUI : MonoBehaviour
             
         }
     }
-
-    /*public void dropItem()
-    {
-        for (int i = 0; i < slots.Length; i++)
-        {
-            if (i == (itemCount-1))
-            {
-                Vector3 itemDropLocation = new Vector3(player.position.x, player.position.y, player.position.z + 1f);
-                Instantiate(slots[i], itemDropLocation, Quaternion.identity);
-                //ScriptableObject.CreateInstance<Item>();
-            }
-        }
-    }*/
 }

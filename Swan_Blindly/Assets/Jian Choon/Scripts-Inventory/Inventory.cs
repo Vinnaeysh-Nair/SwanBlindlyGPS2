@@ -11,7 +11,7 @@ public class Inventory : MonoBehaviour
     {
         if(instance != null)
         {
-            Debug.Log("Too many instance of inventory is found!!");
+            //Debug.Log("Too many instance of inventory is found!!");
             return;
         }
         instance = this;
@@ -28,13 +28,11 @@ public class Inventory : MonoBehaviour
     private int index = 0;
     
     public List<Item> items = new List<Item>();
-    //public Queue<Item> itemsTemp = new Queue<Item>();
 
     public bool addItem(Item itemTemp)
     {
         if(items.Count >= inventorySpaceLimit)
         {
-            Debug.Log("Insuffiecient space");
             return false;
         }
         

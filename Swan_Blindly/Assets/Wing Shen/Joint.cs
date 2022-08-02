@@ -25,7 +25,7 @@ public class Joint : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.name == "MainCharacter")
+        if(collision.collider.name == "MC_01")
         {
             GetComponent<FixedJoint>().connectedBody = rb;
         }

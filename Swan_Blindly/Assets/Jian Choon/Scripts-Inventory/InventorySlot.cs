@@ -6,15 +6,13 @@ using UnityEngine.UI;
 public class InventorySlot : MonoBehaviour
 {
     [SerializeField] private Image icon;
-
     Item tempItem;
-    //int index = 0;
 
     public void AddItem(Item newItem)
     {
         tempItem = newItem;
 
-        icon.sprite = tempItem.icon ;
+        icon.sprite = tempItem.icon;
         icon.enabled = true;
     }
 
@@ -30,14 +28,5 @@ public class InventorySlot : MonoBehaviour
     {
         tempItem.use();
         Inventory.instance.removeItem(tempItem);
-    }
-
-    //new step 3 - same name as AddItem(), but replicate for better clarity
-    public void swapItem(Item newItem)
-    {
-        tempItem = newItem;
-
-        icon.sprite = tempItem.icon;
-        icon.enabled = false;
     }
 }
