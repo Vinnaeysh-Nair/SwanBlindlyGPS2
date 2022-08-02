@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5abd5680ca48ba84c8e5f61b45a5caa5
+guid: 3c9c3f28922c17f42b9e5f3e51f3a682
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
@@ -12,13 +12,43 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material #0
-    second: {fileID: 2100000, guid: fc820249e7462b541a378b4109af7bed, type: 2}
+      name: 03 - Default
+    second: {fileID: 2100000, guid: 29809a5d2116b2a4a871be3367447230, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material #2
-    second: {fileID: 2100000, guid: 8ba81141e9e2a5443b2985e45a69455d, type: 2}
+      name: 07 - Default
+    second: {fileID: 2100000, guid: 52ae0ea89ca66b244aac7e25b4aab966, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 08 - Default
+    second: {fileID: 2100000, guid: 995b31b975331fe4f9c76cd522a3c04a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 09 - Default
+    second: {fileID: 2100000, guid: 96ab84d51a1223345ae1a15b966ecad4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 13 - Default
+    second: {fileID: 2100000, guid: 3e96242585d9ff14da4912a22b862523, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 14 - Default
+    second: {fileID: 2100000, guid: c176d731464aa91418f1416055378f5b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 15 - Default
+    second: {fileID: 2100000, guid: d8d0f29563892214ba98d525f704164a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #0
+    second: {fileID: 2100000, guid: fc820249e7462b541a378b4109af7bed, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -32,6 +62,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Material #47
+    second: {fileID: 2100000, guid: 4fe4d56f8ebfed14aa478efec4ad0b9f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Material #5
     second: {fileID: 2100000, guid: 6bd6a8bd26cf4a546ae32b1ade703da6, type: 2}
   - first:
@@ -39,6 +74,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Material #6
     second: {fileID: 2100000, guid: 6ecb336d3a0666942907fe015c1f3633, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: baked_Material #2
+    second: {fileID: 2100000, guid: 48943ed433b14654995c6a76618b8f59, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
