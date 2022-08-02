@@ -20,9 +20,6 @@ public class ItemPickUp : Interactable
         {
             Inventory.instance.currentInventoryIndex++;
 
-            //Inventory.instance.itemsTemp.Enqueue(item);
-            //Debug.Log("Enqueued: " + item.name);
-
             Inventory.instance.invokeItemChanged();
             
             Destroy(gameObject);
