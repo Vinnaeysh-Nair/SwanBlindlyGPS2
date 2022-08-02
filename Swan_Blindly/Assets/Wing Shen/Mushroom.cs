@@ -6,15 +6,16 @@ using TMPro;
 
 public class Mushroom : MonoBehaviour
 {
-    Collider collide;
+    Collider collider;
     public GameObject Dialogue;
     public TextMeshProUGUI NameBox;
     public TextMeshProUGUI TextBox;
     public int num;
     public Dialogue dialogue;
+
     void Start()
     {
-        collide = GetComponent<Collider>();
+        collider = GetComponent<Collider>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -31,6 +32,7 @@ public class Mushroom : MonoBehaviour
             
             if(num == 2)
             {
+                Debug.Log("yes");
                 Dialogue.SetActive(true);
                 FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
                 NameBox.text = "Tutorial 2";
@@ -67,7 +69,7 @@ public class Mushroom : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            Dialogue.SetActive(false);
+            //Dialogue.SetActive(false);
         }
     }
 }
