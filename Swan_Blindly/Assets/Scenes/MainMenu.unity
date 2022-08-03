@@ -3966,6 +3966,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 578533790}
   m_CullTransparentMesh: 1
+--- !u!1 &618235820
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 618235822}
+  - component: {fileID: 618235821}
+  m_Layer: 0
+  m_Name: LoadPlayerPrefs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &618235821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618235820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0105b59cdd48c24458c04ca60ff94e1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canUse: 1
+  mainMenuController: {fileID: 2036415999}
+  volumeTextValue: {fileID: 284291233}
+  volumeSlider: {fileID: 233921257}
+  brightnessSlider: {fileID: 706772058}
+  brightnessTextValue: {fileID: 142430612}
+  qualityDropdown: {fileID: 1756324493}
+  fullScreenToggle: {fileID: 869218877}
+  controllerSenTextValue: {fileID: 575647336}
+  controllerSenSlider: {fileID: 645763132}
+--- !u!4 &618235822
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618235820}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &645763130
 GameObject:
   m_ObjectHideFlags: 0
