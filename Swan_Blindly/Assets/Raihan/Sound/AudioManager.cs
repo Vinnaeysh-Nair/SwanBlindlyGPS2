@@ -65,7 +65,7 @@ public class AudioManager : MonoBehaviour
         AudioSource activeSource = (firstMusicSourceIsPlaying) ? musicSource : musicSource2;
 
         activeSource.clip = musicClip;
-        activeSource.volume = 0.3f;
+        activeSource.volume = 0.1f;
         activeSource.Play();
     }
 
