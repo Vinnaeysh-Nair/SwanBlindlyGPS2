@@ -43,9 +43,9 @@ Material:
     m_Ints: []
     m_Floats:
     - _Distance: 2.92
-    - _FoamAmount: 24.2
+    - _FoamAmount: 9.7
     - _FoamCutoff: 12.8
-    - _FoamScale: 26.6
+    - _FoamScale: 169.7
     - _FoamSpeed: 0.5
     - _NormalStrength: 0.73
     - _QueueControl: 0
