@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerJump : MonoBehaviour
 {
+    [SerializeField] private AudioClip jumpSFX;
+
     [Header("Jumping")]
     private Rigidbody rb;
     private Animator playerAnim;
@@ -36,6 +38,7 @@ public class PlayerJump : MonoBehaviour
         {
             playerAnim.SetBool("Jump", true);
             rb.AddForce(new Vector3(0, JumpForce, 0), ForceMode.Impulse);
+            AudioManager.Instance.PlaySFX(jumpSFX);
         }
     }
 
