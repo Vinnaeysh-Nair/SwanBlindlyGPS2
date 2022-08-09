@@ -25,7 +25,7 @@ public class Firecracker : MonoBehaviour
         foreach(Collider nearyby in colliders)
         {
             Rigidbody rigg = nearyby.GetComponent<Rigidbody>();
-            if(rigg != null)
+            if(rigg != null && rigg.tag!= "Player")
             {
                 rigg.AddExplosionForce(expForce, transform.position, radius);
             }
