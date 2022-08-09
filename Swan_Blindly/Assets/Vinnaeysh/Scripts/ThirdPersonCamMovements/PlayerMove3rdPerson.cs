@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMove3rdPerson : MonoBehaviour
 {
+    [SerializeField] private AudioClip walkSFX;
+
     [Header("Movement")]
     public float moveSpeed;
     public float groundDrag;
@@ -29,7 +31,8 @@ public class PlayerMove3rdPerson : MonoBehaviour
     float InputVertical;
     Vector3 moveDir;
 
-
+    //audio
+    bool isRunningSound = false;
 
     void Start()
     {
@@ -56,6 +59,18 @@ public class PlayerMove3rdPerson : MonoBehaviour
         }
         else
             rb.drag = 0;
+
+        if (!isRunningSound && PlayerAnim?.GetBool("Move") == true)
+        {
+            isRunningSound = true;
+            AudioManager.Instance.PlayStep(walkSFX);
+        }
+        else if (isRunningSound && PlayerAnim?.GetBool("Move") == false)
+        {
+            AudioManager.Instance.StopSound(walkSFX);
+            isRunningSound = false;
+        }
+        
     }
 
     private void FixedUpdate()
@@ -72,6 +87,7 @@ public class PlayerMove3rdPerson : MonoBehaviour
 
     private void PlayerMove()
     {
+
         //calculate move dir
         moveDir =  Orientation.forward  * InputVertical + Orientation.right * InputHorizontal;
 
@@ -80,6 +96,7 @@ public class PlayerMove3rdPerson : MonoBehaviour
         {
             rb.AddForce(moveDir.normalized * moveSpeed * 10f, ForceMode.Force);
             isMoving = true;
+            
         }
         //In Air
         else if (!isgrounded)

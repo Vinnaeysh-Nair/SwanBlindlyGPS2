@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Firebush : MonoBehaviour
 {
+    [SerializeField] private AudioClip fireBurnSFX;
+
     Collider collider;
     public GameObject firebush;
     public GameObject FirebushFire;
@@ -26,6 +28,7 @@ public class Firebush : MonoBehaviour
             canvas.SetActive(false);
             rb.constraints = RigidbodyConstraints.FreezePosition;
             playerCam.SetActive(false);
+            AudioManager.Instance.PlaySFX(fireBurnSFX, 0.3f);
             firebushCam.SetActive(true);
             FirebushFire.SetActive(true);
             StartCoroutine(burntFirebush());
