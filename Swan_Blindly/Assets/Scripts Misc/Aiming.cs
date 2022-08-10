@@ -9,6 +9,7 @@ public class Aiming : MonoBehaviour
     public Transform cam;
     public Transform throwingPoint;
     public GameObject objectToThrow;
+    [SerializeField] private Animator playerAnim;
 
     [Header("Settings")]
     public int totalThrows;
@@ -56,6 +57,7 @@ public class Aiming : MonoBehaviour
             line.enabled = true;
             mainCamera.SetActive(false);
             aimCamera.SetActive(true);
+            playerAnim?.SetBool("Throwing", true);
         }
     }
 
@@ -75,6 +77,7 @@ public class Aiming : MonoBehaviour
     {
         readyToThrow = false;
         line.enabled = false;
+        
 
         //Instantiate object to throw
         GameObject projectile = Instantiate(objectToThrow, throwingPoint.position, cam.rotation);
@@ -96,5 +99,6 @@ public class Aiming : MonoBehaviour
     public void ResetThrow()
     {
         readyToThrow = true;
+        playerAnim?.SetBool("Throwing", false);
     }
 }
