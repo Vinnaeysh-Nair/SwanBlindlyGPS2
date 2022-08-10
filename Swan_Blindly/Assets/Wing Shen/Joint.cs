@@ -5,6 +5,7 @@ using UnityEngine;
 public class Joint : MonoBehaviour
 {
     public Rigidbody rb;
+    [SerializeField] Collider collider;
 
     void Update()
     {
@@ -23,9 +24,9 @@ public class Joint : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        if(collision.collider.name == "MC_01")
+        if(other.CompareTag("Player"))
         {
             GetComponent<FixedJoint>().connectedBody = rb;
         }
