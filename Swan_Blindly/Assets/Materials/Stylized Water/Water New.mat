@@ -52,7 +52,7 @@ Material:
     - _QueueOffset: 0
     - _RefractionSpeed: 0.07
     - _RefractionStrength: 18.53
-    - _Smoothness: 1
+    - _Smoothness: 0.622
     - _WaveDisplacment: 0.02
     m_Colors:
     - _DeepColor: {r: 0.003900741, g: 0.009844727, b: 0.0031577428, a: 0.7647059}
