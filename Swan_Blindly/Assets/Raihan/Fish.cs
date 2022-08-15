@@ -19,11 +19,15 @@ public class Fish : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(throwkey))
+        /*if (Input.GetKeyDown(throwkey))
         {
             Throw();
-        }
+        }*/
+    }
 
+    private void Start()
+    {
+        InvokeRepeating("Throw", 1.0f, 4.0f);
     }
 
     private void Throw()
@@ -41,7 +45,6 @@ public class Fish : MonoBehaviour
 
         projectileRb.AddForce(forceToAdd, ForceMode.Impulse);
 
-        
 
     }
 
