@@ -35,6 +35,13 @@ public class SceneLoader : MonoBehaviour
         //StartCoroutine(LoadingProgress());
     }
 
+    public void Cutscene()
+    {
+        loaderCanvas.SetActive(true);
+        scenesToLoad.Add(SceneManager.LoadSceneAsync("Cutscenes"));
+        StartCoroutine(LoadingScene());
+    }
+
     IEnumerator LoadingScene()
     {
         transition.SetTrigger("Start");
