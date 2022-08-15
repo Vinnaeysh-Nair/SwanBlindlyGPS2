@@ -32,12 +32,23 @@ public class SceneLoader : MonoBehaviour
         loaderCanvas.SetActive(true);
         scenesToLoad.Add(SceneManager.LoadSceneAsync("MainLevel"));
         StartCoroutine(LoadingScene());
-        StartCoroutine(LoadingProgress());
+        //StartCoroutine(LoadingProgress());
     }
 
     IEnumerator LoadingScene()
     {
         transition.SetTrigger("Start");
+
+        float totalProgress = 0;
+        for (int i = 0; i < scenesToLoad.Count; ++i)
+        {
+            while (!scenesToLoad[i].isDone)
+            {
+                totalProgress += scenesToLoad[i].progress;
+                loadingBar.fillAmount = totalProgress / scenesToLoad.Count;
+                yield return null;
+            }
+        }
 
         yield return new WaitForSeconds(transitionTime);
     }
