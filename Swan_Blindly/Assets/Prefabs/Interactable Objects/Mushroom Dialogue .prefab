@@ -93,6 +93,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7760414013013656180}
   - component: {fileID: 8023931377645453431}
+  - component: {fileID: 6142642911191233407}
+  - component: {fileID: 2074883304782510877}
   m_Layer: 0
   m_Name: 'Mushroom Dialogue '
   m_TagString: Untagged
@@ -107,7 +109,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6987712784105789646}
-  m_LocalRotation: {x: 0.04313355, y: 0.73065346, z: 0.6812378, w: -0.014146821}
+  m_LocalRotation: {x: -0.043135926, y: -0.7306514, z: -0.6812398, w: 0.0141515285}
   m_LocalPosition: {x: -55.09178, y: 120.953, z: 123.25278}
   m_LocalScale: {x: 1.9875541, y: 1.9875543, z: 1.0117235}
   m_ConstrainProportionsScale: 0
@@ -131,8 +133,42 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!136 &6142642911191233407
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6987712784105789646}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.3
+  m_Height: 0.3
+  m_Direction: 0
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2074883304782510877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6987712784105789646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bd9583707b715b4298e6168b29a90a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Dialogue: {fileID: 0}
+  NameBox: {fileID: 0}
+  TextBox: {fileID: 0}
+  num: 1
+  dialogue:
+    name: 
+    sentences:
+    - 
 --- !u!1 &8615009022818336740
 GameObject:
   m_ObjectHideFlags: 0
