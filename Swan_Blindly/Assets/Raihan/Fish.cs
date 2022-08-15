@@ -41,7 +41,8 @@ public class Fish : MonoBehaviour
 
         projectileRb.AddForce(forceToAdd, ForceMode.Impulse);
 
-
+        
 
     }
+
 }

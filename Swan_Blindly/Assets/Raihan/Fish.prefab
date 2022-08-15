@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7029341340712439803}
+  - component: {fileID: 6793217079330436379}
   m_Layer: 0
   m_Name: spawnPoint
   m_TagString: Untagged
@@ -31,6 +32,24 @@ Transform:
   m_Father: {fileID: 7029341340975555220}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6793217079330436379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7029341340712439802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88c0103956a3c4e4c9be1d9d5ee4e45d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sParent: {fileID: 0}
+  spawnPoint: {fileID: 0}
+  objectToThrow: {fileID: 3686004771779814861, guid: c23d6d1cc845eba42999b4fadaf3267e, type: 3}
+  throwkey: 280
+  throwForce: 12
+  throwUpwardForce: 8
 --- !u!1 &7029341340975555211
 GameObject:
   m_ObjectHideFlags: 0
