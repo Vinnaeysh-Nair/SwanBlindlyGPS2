@@ -11,8 +11,9 @@ public class SceneLoader : MonoBehaviour
     [SerializeField] public GameObject loaderCanvas;
     [SerializeField] public Image loadingBar;
     List<AsyncOperation> scenesToLoad = new List<AsyncOperation>();
-    public Animator transition;
+    //public Animator transition;
     public float transitionTime = 1f;
+ 
 
     private void Awake()
     {
@@ -44,7 +45,7 @@ public class SceneLoader : MonoBehaviour
 
     IEnumerator LoadingScene()
     {
-        transition.SetTrigger("Start");
+        //transition.SetTrigger("Start");
 
         float totalProgress = 0;
         for (int i = 0; i < scenesToLoad.Count; ++i)
