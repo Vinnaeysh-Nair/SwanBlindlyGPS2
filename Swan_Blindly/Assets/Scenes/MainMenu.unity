@@ -795,7 +795,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 89552444}
-  m_LocalRotation: {x: 0.03811158, y: -0.25474027, z: 0.026601555, w: -0.96589196}
+  m_LocalRotation: {x: 0.03811158, y: -0.25474033, z: 0.026601555, w: -0.96589196}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2261,6 +2261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 233921256}
   - component: {fileID: 233921257}
+  - component: {fileID: 233921258}
   m_Layer: 5
   m_Name: VolumeSlider
   m_TagString: Untagged
@@ -2356,6 +2357,31 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 444989536}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: ChangeVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &233921258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233921255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53032d40314472c4e8ff1acb1f9bccde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 233921257}
 --- !u!1 &284291231
 GameObject:
   m_ObjectHideFlags: 0
@@ -3269,6 +3295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53032d40314472c4e8ff1acb1f9bccde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 0}
 --- !u!4 &444989537
 Transform:
   m_ObjectHideFlags: 0
@@ -6246,7 +6273,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1040938338}
-  m_LocalRotation: {x: -0.14032154, y: -0.24337065, z: 0.07269513, w: -0.9569723}
+  m_LocalRotation: {x: -0.14032155, y: -0.24337074, z: 0.07269514, w: -0.95697236}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8002,7 +8029,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1294599811}
-  m_LocalRotation: {x: -0.10871673, y: -0.2456336, z: 0.06463753, w: -0.9610759}
+  m_LocalRotation: {x: -0.10871673, y: -0.24563363, z: 0.06463753, w: -0.9610759}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -10283,7 +10310,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667556010}
-  m_LocalRotation: {x: -0.033427678, y: 0.0022205743, z: 0.00007427078, w: 0.9994387}
+  m_LocalRotation: {x: -0.033427678, y: 0.0022206095, z: 0.00007427193, w: 0.9994387}
   m_LocalPosition: {x: 34.322823, y: 111.381996, z: 72.11978}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
