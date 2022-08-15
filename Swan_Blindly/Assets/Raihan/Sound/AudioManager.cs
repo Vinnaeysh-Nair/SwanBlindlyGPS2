@@ -28,8 +28,6 @@ public class AudioManager : MonoBehaviour
     }
     #endregion
 
-    [SerializeField] Slider volumeSlider;
-
     #region Fields
     private AudioSource musicSource;
     private AudioSource musicSource2;   //To change music (cross-fade) without stopping 1 completely and starting anoter
@@ -53,36 +51,6 @@ public class AudioManager : MonoBehaviour
     }
 
 
-    #region VolSlider
-    void Start()
-    {
-        if (!PlayerPrefs.HasKey("musicVolume"))
-        {
-            PlayerPrefs.SetFloat("musicVolume", 1);
-            Load();
-        }
-        else
-        {
-            Load();
-        }
-    }
-
-    public void ChangeVolume()
-    {
-        AudioListener.volume = volumeSlider.value;
-        Save();
-    }
-
-    public void Load()
-    {
-        volumeSlider.value = PlayerPrefs.GetFloat("musicVoume");
-    }
-
-    public void Save()
-    {
-        PlayerPrefs.SetFloat("musicVolume", volumeSlider.value);
-    }
-    #endregion
 
     public void PlayMusic(AudioClip musicClip)
     {

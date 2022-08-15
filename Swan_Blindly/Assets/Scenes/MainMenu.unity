@@ -2357,8 +2357,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 444989536}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+      - m_Target: {fileID: 233921258}
+        m_TargetAssemblyTypeName: SliderAudio, Assembly-CSharp
         m_MethodName: ChangeVolume
         m_Mode: 1
         m_Arguments:
@@ -2378,7 +2378,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 233921255}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53032d40314472c4e8ff1acb1f9bccde, type: 3}
+  m_Script: {fileID: 11500000, guid: b87a534ba053e624d910f82545b20f91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   volumeSlider: {fileID: 233921257}
@@ -3296,7 +3296,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53032d40314472c4e8ff1acb1f9bccde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeSlider: {fileID: 0}
 --- !u!4 &444989537
 Transform:
   m_ObjectHideFlags: 0
