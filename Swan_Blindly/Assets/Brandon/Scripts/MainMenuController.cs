@@ -95,7 +95,7 @@ public class MainMenuController : MonoBehaviour
     public void setVolume(float volume)
     {
         AudioListener.volume = volume;
-        volumeValue.text = volume.ToString("0");
+        volumeValue.text = volume.ToString("0.00 ");
     }
     
     public void volumeApply()
