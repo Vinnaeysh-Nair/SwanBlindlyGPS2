@@ -48,7 +48,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   navAgent: {fileID: 8678367366073588399}
   playerToFollow: {fileID: 0}
-  speed: 5
+  minSpeed: 1
+  maxSpeed: 5
+  boxCollider: {fileID: 0}
+  jumpButton: {fileID: 0}
 --- !u!195 &8678367366073588399
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -248,8 +251,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe3bc3502c7c05c45a8b82499ec79ade, type: 3}
+--- !u!1 &525990023052462668 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9161289212391398823, guid: fe3bc3502c7c05c45a8b82499ec79ade, type: 3}
+  m_PrefabInstance: {fileID: 8678367365622405099}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &289371531005416790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525990023052462668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40350098e7b7b8b4f8bd414d61940d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boatAgent: {fileID: 8678367366073588399}
+  endPoint: {fileID: 0}
+  minSpeed: 5
+  maxSpeed: 10
+  boxCollider: {fileID: 6418508643613949739}
+  jumpButton: {fileID: 0}
 --- !u!4 &866768720196882678 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8388130969248679709, guid: fe3bc3502c7c05c45a8b82499ec79ade, type: 3}
+  m_PrefabInstance: {fileID: 8678367365622405099}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &6418508643613949739 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 2413048387858737344, guid: fe3bc3502c7c05c45a8b82499ec79ade, type: 3}
   m_PrefabInstance: {fileID: 8678367365622405099}
   m_PrefabAsset: {fileID: 0}

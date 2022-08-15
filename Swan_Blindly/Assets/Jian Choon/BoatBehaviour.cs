@@ -5,9 +5,9 @@ using UnityEngine.AI;
 
 public class BoatBehaviour : MonoBehaviour
 {
-    [SerializeField] NavMeshAgent navAgent;
-    [SerializeField] Transform playerToFollow;
-
+    [SerializeField] NavMeshAgent boatAgent;
+    [SerializeField] Transform endPoint;
+    
     //use this for final version
     [Header("Speed")]
     [SerializeField] int minSpeed = 1;
@@ -34,22 +34,32 @@ public class BoatBehaviour : MonoBehaviour
         {
             jumpButton.SetActive(false);
             chaseTarget();
+
+            other.gameObject.transform.SetParent(transform);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.gameObject.tag == "Player")
+        {
+            other.gameObject.transform.SetParent(null);
         }
     }
 
     void generateSpeed()
     {
-        navAgent.speed = Mathf.Lerp(minSpeed, maxSpeed, sin01);
+        boatAgent.speed = Mathf.Lerp(minSpeed, maxSpeed, sin01);
     }
 
     void chaseTarget()
-    { 
-        navAgent.SetDestination(playerToFollow.position);
-        navAgent.isStopped = false;
+    {
+        boatAgent.SetDestination(endPoint.position);
+        boatAgent.isStopped = false;
     }
 
     void stopChasingTarget()
     {
-        navAgent.isStopped = true;
+        boatAgent.isStopped = true;
     }
 }
