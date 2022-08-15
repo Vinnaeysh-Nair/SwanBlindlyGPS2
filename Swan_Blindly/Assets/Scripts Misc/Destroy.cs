@@ -7,7 +7,7 @@ public class Destroy : MonoBehaviour
     public GameObject gameObj;
     void Start()
     {
-        Destroy(gameObj, 5);
+        Destroy(gameObj, 3);
     }
 
 

@@ -176,6 +176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4065766826295230327}
   - component: {fileID: 7104749995348466792}
+  - component: {fileID: 2123990053469072070}
   m_Layer: 0
   m_Name: FishTest
   m_TagString: Untagged
@@ -217,6 +218,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2123990053469072070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3686004771779814861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccce0e7916fa9f84a974175db54c07eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObj: {fileID: 3686004771779814861}
 --- !u!1 &6095017435893852944
 GameObject:
   m_ObjectHideFlags: 0
