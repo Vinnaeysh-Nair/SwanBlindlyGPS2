@@ -16,25 +16,19 @@ public class Fish : MonoBehaviour
     public float throwForce;
     public float throwUpwardForce;
 
-
-    private void Update()
-    {
-        /*if (Input.GetKeyDown(throwkey))
-        {
-            Throw();
-        }*/
-    }
+    private float spawnInterval;
 
     private void Start()
     {
-        InvokeRepeating("Throw", 1.0f, 4.0f);
+        spawnInterval = Random.Range(4f, 8f);
+        InvokeRepeating("Throw", 1.0f, spawnInterval);
     }
 
     private void Throw()
     {
 
         //Instantiate object to throw
-        GameObject projectile = Instantiate(objectToThrow, spawnPoint.position, Quaternion.Euler(-90,0,-90));
+        GameObject projectile = Instantiate(objectToThrow, spawnPoint.position, Quaternion.Euler(-90,0,180));
 
         //Get rigidbody component
         Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
