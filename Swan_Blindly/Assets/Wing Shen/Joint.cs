@@ -16,13 +16,14 @@ public class Joint : MonoBehaviour
 
     void Awake()
     {
-        attachButton.onClick.AddListener(Attach);
-        detachButton.onClick.AddListener(Detach);
+
     }
 
     void Start()
     {
         canvas.SetActive(false);
+        attachButton.onClick.AddListener(Attach);
+        detachButton.onClick.AddListener(Detach);
     }
 
     void Update()
