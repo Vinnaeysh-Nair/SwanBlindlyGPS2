@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class NPCDialogue : MonoBehaviour
 {
-    /*[SerializeField] GameObject playerCam;
+    [SerializeField] GameObject playerCam;
     [SerializeField] GameObject NPCCam;
-    [SerializeField] GameObject canvas;*/
+    [SerializeField] GameObject canvas;
     Collider collider;
     [SerializeField] GameObject Dialogue;
     [SerializeField] Dialogue dialogue;
@@ -15,12 +15,15 @@ public class NPCDialogue : MonoBehaviour
     void Start()
     {
         collider = GetComponent<Collider>();
+        NPCCam.SetActive(false);
     }
 
     void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
         {
+            playerCam.SetActive(false);
+            NPCCam.SetActive(true);
             Dialogue.SetActive(true);
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
         }
@@ -31,6 +34,8 @@ public class NPCDialogue : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             Dialogue.SetActive(false);
+            playerCam.SetActive(true);
+            NPCCam.SetActive(false);
         }
     }
 }

@@ -57,10 +57,16 @@ public class Joint : MonoBehaviour
 
     public void Attach()
     {
+        float distance = Vector3.Distance(player.position, transform.position);
+
         canvas.SetActive(false);
         boxRb.constraints = RigidbodyConstraints.None;
         boxRb.constraints = RigidbodyConstraints.FreezeRotation;
-        GetComponent<FixedJoint>().connectedBody = playerRb;
+
+        if(distance <= radius)
+        {
+            GetComponent<FixedJoint>().connectedBody = playerRb;
+        }
     }
 
     public void Detach()
