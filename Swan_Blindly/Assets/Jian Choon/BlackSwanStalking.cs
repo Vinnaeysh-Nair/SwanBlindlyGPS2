@@ -9,35 +9,42 @@ public class BlackSwanStalking : MonoBehaviour
     [SerializeField] Transform playerToFollow;
 
     //use this for final version
-/*    [Header("speed")]
+    [Header("Speed")]
     [SerializeField] int minSpeed = 1;
-    [SerializeField] int maxSpeed = 5;*/
-    
-    [Range(1, 10)]
-    [SerializeField] float speed = 1;
+    [SerializeField] int maxSpeed = 5;
 
+    /*[Range(1, 10)]
+    [SerializeField] float speed = 1;*/
+    [SerializeField] private BoxCollider boxCollider;
+    [SerializeField] private GameObject jumpButton;
+
+    private float color_tValue;
+    private float sin01;
+    
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G))
+        color_tValue += 0.5f * Time.deltaTime;
+        sin01 = (Mathf.Sin(color_tValue) * 0.5f) + 0.5f;
+        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
         {
-            generateRandomSpeed();
+            jumpButton.SetActive(false);
             chaseTarget();
-        }
-        if(Input.GetKeyUp(KeyCode.G))
-        {
-            stopChasingTarget();
         }
     }
 
-    void generateRandomSpeed()
+    void generateSpeed()
     {
-        //speed = Random.Range(minSpeed, maxSpeed);
-        Debug.Log(speed);
-        navAgent.speed = speed;
+        navAgent.speed = Mathf.Lerp(minSpeed, maxSpeed, sin01);
     }
 
     void chaseTarget()
     {
+        generateSpeed();
         navAgent.SetDestination(playerToFollow.position);
         navAgent.isStopped = false;
     }

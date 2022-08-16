@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3009904785223156913}
   - component: {fileID: 5282429473381440772}
   - component: {fileID: 1912312694532502244}
+  - component: {fileID: 1678184556687059073}
   m_Layer: 0
   m_Name: Plastic Wrapper
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3844353146174272946}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.7105255, y: 0.009315491, z: 0.1615982}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -83,3 +84,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!205 &1678184556687059073
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3844353146174272946}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.24708794
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.15322924
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.05184714
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1

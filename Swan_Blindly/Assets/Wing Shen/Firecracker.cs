@@ -12,7 +12,7 @@ public class Firecracker : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         GameObject _exp = Instantiate(exp, transform.position, transform.rotation);
-        AudioManager.Instance.PlaySFX(explodeSFX, 0.2f);
+        AudioManager.Instance.PlaySFX(explodeSFX, 1.0f);
         Destroy(_exp, 3);
         knockBack();
         Destroy(gameObject);
@@ -25,7 +25,7 @@ public class Firecracker : MonoBehaviour
         foreach(Collider nearyby in colliders)
         {
             Rigidbody rigg = nearyby.GetComponent<Rigidbody>();
-            if(rigg != null)
+            if(rigg != null && rigg.tag!= "Player")
             {
                 rigg.AddExplosionForce(expForce, transform.position, radius);
             }

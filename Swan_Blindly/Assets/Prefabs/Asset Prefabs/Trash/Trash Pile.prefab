@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8389320673366383758}
   - component: {fileID: 7817815568005076276}
   - component: {fileID: 589658090795348846}
+  - component: {fileID: 5876271680801611494}
   m_Layer: 0
   m_Name: Trash Pile
   m_TagString: Untagged
@@ -25,9 +26,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5357872139941137242}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.6552963, y: 0.07260132, z: 0.18071747}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.62877, y: 0.62877, z: 0.62877}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,3 +84,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!205 &5876271680801611494
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5357872139941137242}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.249
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.15023457
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.05184714
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1

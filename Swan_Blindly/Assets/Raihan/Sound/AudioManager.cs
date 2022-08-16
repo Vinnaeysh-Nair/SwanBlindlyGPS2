@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
@@ -48,6 +49,8 @@ public class AudioManager : MonoBehaviour
         musicSource.loop = true;
         musicSource2.loop = true;
     }
+
+
 
     public void PlayMusic(AudioClip musicClip)
     {

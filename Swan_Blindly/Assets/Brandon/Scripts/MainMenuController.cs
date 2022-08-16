@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.Threading.Tasks;
 
 public class MainMenuController : MonoBehaviour
 {
@@ -72,11 +73,6 @@ public class MainMenuController : MonoBehaviour
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
 
-    public void NewGameDialogueYes()
-    {
-        SceneManager.LoadScene(newGameLevel);
-    }
-
     public void loadGameDialogueYes()
     {
         //Load Next scene
@@ -99,7 +95,7 @@ public class MainMenuController : MonoBehaviour
     public void setVolume(float volume)
     {
         AudioListener.volume = volume;
-        volumeValue.text = volume.ToString("0");
+        volumeValue.text = volume.ToString("0.00 ");
     }
     
     public void volumeApply()
@@ -125,7 +121,6 @@ public class MainMenuController : MonoBehaviour
     {
         _brightnessLevel = brightness;
         brightnessValue.text = brightness.ToString("0.0");
-
     }
 
     public void SetFullscreen (bool isFullScreen)
@@ -195,4 +190,5 @@ public class MainMenuController : MonoBehaviour
         yield return new WaitForSeconds(2);
         confirmationPrompt.SetActive(false);
     }
+
 }
