@@ -5,13 +5,15 @@ using UnityEngine.AI;
 
 public class BoatBehaviour : MonoBehaviour
 {
-    [SerializeField] NavMeshAgent boatAgent;
-    [SerializeField] Transform endPoint;
+    [Header("Object Reference")]
+    [SerializeField] private NavMeshAgent boatAgent;
+    [SerializeField] private Transform endPoint;
+    [SerializeField] private GameObject fishSpawner;
     
     //use this for final version
     [Header("Speed")]
-    [SerializeField] int minSpeed = 1;
-    [SerializeField] int maxSpeed = 5;
+    [SerializeField] private int minSpeed = 1;
+    [SerializeField] private int maxSpeed = 5;
 
     /*[Range(1, 10)]
     [SerializeField] float speed = 1;*/
@@ -34,6 +36,7 @@ public class BoatBehaviour : MonoBehaviour
         {
             jumpButton.SetActive(false);
             chaseTarget();
+            fishSpawner.SetActive(true);
 
             other.gameObject.transform.SetParent(transform);
         }
