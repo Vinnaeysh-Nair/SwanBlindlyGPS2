@@ -9,6 +9,8 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
     public GameObject canvas;
+    [SerializeField] GameObject playerCam;
+    [SerializeField] GameObject NPCCam;
     public Rigidbody rb;
     
     public Animator animator;
@@ -18,6 +20,7 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         sentences = new Queue<string>();
+        NPCCam.SetActive(false);
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -25,6 +28,8 @@ public class DialogueManager : MonoBehaviour
         animator.SetBool("IsOpen", true);
         canvas.SetActive(false);
         rb.constraints = RigidbodyConstraints.FreezePosition;
+        playerCam.SetActive(false);
+        NPCCam.SetActive(true);
 
         nameText.text = dialogue.name;
 
@@ -67,5 +72,7 @@ public class DialogueManager : MonoBehaviour
         canvas.SetActive(true);
         rb.constraints = RigidbodyConstraints.None;
         rb.constraints = RigidbodyConstraints.FreezeRotation;
+        playerCam.SetActive(true);
+        NPCCam.SetActive(false);
     }    
 }
