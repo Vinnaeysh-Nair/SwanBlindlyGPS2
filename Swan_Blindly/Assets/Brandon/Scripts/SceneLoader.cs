@@ -13,7 +13,6 @@ public class SceneLoader : MonoBehaviour
     List<AsyncOperation> scenesToLoad = new List<AsyncOperation>();
     //public Animator transition;
     public float transitionTime = 1f;
- 
 
     private void Awake()
     {
