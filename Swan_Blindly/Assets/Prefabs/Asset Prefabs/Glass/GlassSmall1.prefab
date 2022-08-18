@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2992635394438388376}
   - component: {fileID: 845774657402859859}
   - component: {fileID: 1202936254402973788}
+  - component: {fileID: 1501903357645415331}
   m_Layer: 0
   m_Name: GlassSmall1
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1501903357645415331
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447077834360550616}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5613867604693661769, guid: a08f55cebfe66054bae90c4f59e8326a, type: 3}

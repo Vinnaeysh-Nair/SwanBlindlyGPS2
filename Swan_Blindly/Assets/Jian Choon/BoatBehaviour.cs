@@ -9,6 +9,8 @@ public class BoatBehaviour : MonoBehaviour
     [SerializeField] private NavMeshAgent boatAgent;
     [SerializeField] private Transform endPoint;
     [SerializeField] private GameObject fishSpawner;
+    [SerializeField] private GameObject fishSpawner2;
+    [SerializeField] private GameObject fishSpawner3;
     
     //use this for final version
     [Header("Speed")]
@@ -35,9 +37,11 @@ public class BoatBehaviour : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             jumpButton.SetActive(false);
-            chaseTarget();
             fishSpawner.SetActive(true);
-
+            fishSpawner2.SetActive(true);
+            fishSpawner3.SetActive(true);
+            chaseTarget();
+            
             other.gameObject.transform.SetParent(transform);
         }
     }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7817815568005076276}
   - component: {fileID: 589658090795348846}
   - component: {fileID: 5876271680801611494}
+  - component: {fileID: -752537484966645133}
   m_Layer: 0
   m_Name: Trash Pile
   m_TagString: Untagged
@@ -108,3 +109,17 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!64 &-752537484966645133
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5357872139941137242}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4164511204261677510, guid: 6ab6cc649d03c394db3e03ac4635022c, type: 3}

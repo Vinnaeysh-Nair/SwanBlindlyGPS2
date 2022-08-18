@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7042139748977383772}
   - component: {fileID: 6521443062887280906}
   - component: {fileID: 1385706081349132037}
+  - component: {fileID: 7197461812628493411}
   m_Layer: 0
   m_Name: SM_RockFormation3
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7197461812628493411
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4485579470153529039}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2891358349853057551, guid: 4422a319101cea84abcd7534fab7439b, type: 3}

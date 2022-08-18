@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 777579867859231194}
   - component: {fileID: 8536742165351884983}
   - component: {fileID: 3615462422427286948}
+  - component: {fileID: -150482757548636738}
   m_Layer: 0
   m_Name: GlassBig2
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &-150482757548636738
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4728333943384673169}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3822247309040838107, guid: a08f55cebfe66054bae90c4f59e8326a, type: 3}

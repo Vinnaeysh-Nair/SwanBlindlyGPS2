@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1506615515101085552}
   - component: {fileID: 6554217793513726735}
   - component: {fileID: 4919537136325145851}
+  - component: {fileID: -113392150224462982}
   m_Layer: 0
   m_Name: BeerBottle
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &-113392150224462982
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357511980004305462}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3914798656235243572, guid: 6ab6cc649d03c394db3e03ac4635022c, type: 3}

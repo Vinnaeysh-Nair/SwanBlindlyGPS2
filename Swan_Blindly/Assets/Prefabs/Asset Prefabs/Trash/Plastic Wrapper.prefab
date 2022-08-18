@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5282429473381440772}
   - component: {fileID: 1912312694532502244}
   - component: {fileID: 1678184556687059073}
+  - component: {fileID: -5207473267155513773}
   m_Layer: 0
   m_Name: Plastic Wrapper
   m_TagString: Untagged
@@ -108,3 +109,17 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!64 &-5207473267155513773
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3844353146174272946}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6602441374692447843, guid: 6ab6cc649d03c394db3e03ac4635022c, type: 3}

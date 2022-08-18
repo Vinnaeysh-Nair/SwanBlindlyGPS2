@@ -8,14 +8,15 @@ public class NavMeshEndPoint : MonoBehaviour
     [SerializeField] private Transform player;
     [SerializeField] private GameObject jumpButton;
     [SerializeField] private GameObject fishSpawner;
-    //[SerializeField] private SphereCollider endPointCollider;
+    [SerializeField] private GameObject fishSpawner2;
+    [SerializeField] private GameObject fishSpawner3;
 
     private void Update()
     {
         float distance = Vector3.Distance(player.position, transform.position);
         if (distance <= radius)
         {
-            jumpButton.SetActive(true);
+            
         }
     }
 
@@ -28,5 +29,8 @@ public class NavMeshEndPoint : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         fishSpawner.SetActive(false);
+        fishSpawner2.SetActive(false);
+        fishSpawner3.SetActive(false);
+        jumpButton.SetActive(true);
     }
 }

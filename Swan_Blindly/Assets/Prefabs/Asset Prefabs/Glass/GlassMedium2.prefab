@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6730208750169803431}
   - component: {fileID: 9182167215050892647}
   - component: {fileID: 5866402566411210142}
+  - component: {fileID: -8099545255183185078}
   m_Layer: 0
   m_Name: GlassMedium2
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &-8099545255183185078
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5688633843733406115}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5060444177187149915, guid: a08f55cebfe66054bae90c4f59e8326a, type: 3}
