@@ -59,7 +59,7 @@ public class Mushroom : MonoBehaviour
                 Dialogue.SetActive(true);
                 FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
                 NameBox.text = "Tutorial 4";
-                TextBox.text = "Collide with movable objects to push and pull and tap it to detach it at your preferred spot.";
+                TextBox.text = "Collide with one of the box and click on it and choose to click on either of the options to attach or detach the box.";
             }
 
             if(num == 5)

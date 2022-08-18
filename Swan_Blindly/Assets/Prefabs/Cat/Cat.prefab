@@ -505,9 +505,12 @@ MonoBehaviour:
   canvas: {fileID: 0}
   Dialogue: {fileID: 0}
   dialogue:
-    name: 
+    name: Cat
     sentences:
-    - 
+    - "Hi there, baby swan! Seems you\u2019re looking for a way to get to the River?
+      This is the only way, it seems. I can help you out if you help me. Find me
+      a jar of Cat Treats and we have a deal! I heard there\u2019s one somewhere
+      over there but I can\u2019t find it."
 --- !u!1 &1808496167015963985
 GameObject:
   m_ObjectHideFlags: 0

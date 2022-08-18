@@ -258,6 +258,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3094790638435143343}
+  - component: {fileID: 3496701139953940373}
+  - component: {fileID: 4665816657873538696}
   m_Layer: 0
   m_Name: crowboss
   m_TagString: Untagged
@@ -272,7 +274,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2430034070706705429}
-  m_LocalRotation: {x: -0, y: 0.70710707, z: -0, w: 0.70710653}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -42.792, y: 109.826, z: 125.936}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -286,6 +288,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!136 &3496701139953940373
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2430034070706705429}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4665816657873538696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2430034070706705429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e92908b4d292f8741a447cfa0661e025, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCam: {fileID: 0}
+  NPCCam: {fileID: 0}
+  canvas: {fileID: 0}
+  Dialogue: {fileID: 0}
+  dialogue:
+    name: Crow Boss
+    sentences:
+    - "Lookie here, it\u2019s that tiny swan we heard about."
+    - "Say, you\u2019re right. This little area here leads to a dead end."
+    - "But if you can help us find 3 Shiny Objects here, you\u2019re more than welcome
+      to explore."
+    - "You\u2019ll be rewarded, don\u2019t you worry. You\u2019ll find another one
+      of us in there somewhere too."
+    - "Ah baby swan, I was told you\u2019d be passing through here. We\u2019re looking
+      for 3 Shiny Objects and I know exactly what they are. They\u2019re um\u2026
+      a Coin, a Marble\u2026 and uh\u2026 oh! A Jewellery Box. Yes, that\u2019s what
+      they are."
 --- !u!1 &6100921087438281736
 GameObject:
   m_ObjectHideFlags: 0
