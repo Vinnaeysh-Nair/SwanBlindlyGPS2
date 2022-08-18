@@ -10,8 +10,4 @@ public class LOADGAME : MonoBehaviour
         SceneManager.LoadScene("MainLevel", LoadSceneMode.Single);
     }
 
-    public void SkipCutscene()
-    {
-        SceneManager.LoadScene("MainLevel", LoadSceneMode.Single);
-    }
 }

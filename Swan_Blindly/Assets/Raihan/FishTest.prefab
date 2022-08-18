@@ -176,7 +176,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4065766826295230327}
   - component: {fileID: 7104749995348466792}
+  - component: {fileID: -1701343554431769713}
   - component: {fileID: 2123990053469072070}
+  - component: {fileID: 3752176080700615004}
   m_Layer: 0
   m_Name: FishTest
   m_TagString: Untagged
@@ -218,6 +220,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-1701343554431769713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3686004771779814861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d06d05b4b16ec946ac1a7d40aec8585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombDamage: 25
+  _healthController: {fileID: 1269889751293495704, guid: 4a6d59679ddd08a41a4a13c00a7cf2a5, type: 3}
+  bombAudio: {fileID: 0}
 --- !u!114 &2123990053469072070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,6 +248,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObj: {fileID: 3686004771779814861}
+--- !u!65 &3752176080700615004
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3686004771779814861}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3339539, y: 0.3088149, z: 0.6687009}
+  m_Center: {x: 0.016044617, y: 0.0048131794, z: 0.026208326}
 --- !u!1 &6095017435893852944
 GameObject:
   m_ObjectHideFlags: 0
