@@ -9,7 +9,7 @@ public class MainmenuBG : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        AudioManager.Instance.PlayMusic(menuMusic);
+        AudioManager.Instance.PlayMusicWithCrossFade(menuMusic);
     }
 }
 
