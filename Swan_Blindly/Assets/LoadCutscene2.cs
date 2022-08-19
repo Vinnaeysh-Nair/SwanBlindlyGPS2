@@ -19,7 +19,7 @@ public class LoadCutscene2 : MonoBehaviour
     {
         if (collision.gameObject == Cutscene2Loader)
         {
-            SceneManager.LoadScene("Cutscene 2");
+            SceneManager.LoadScene("Cutscenes 2");
         }
     }
 }

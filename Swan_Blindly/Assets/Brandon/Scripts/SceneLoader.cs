@@ -38,7 +38,7 @@ public class SceneLoader : MonoBehaviour
     public void Cutscene()
     {
         loaderCanvas.SetActive(true);
-        scenesToLoad.Add(SceneManager.LoadSceneAsync("Cutscenes"));
+        scenesToLoad.Add(SceneManager.LoadSceneAsync("Cutscenes 1"));
         StartCoroutine(LoadingScene());
     }
 
